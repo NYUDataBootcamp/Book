@@ -3,14 +3,14 @@
 * [Preface](README.md)
 * [Where are we headed?](intro.md)
 * [Installing Python](installing-python.md)
-* [The data mentality](data-mentality.md) 
-* [Python fundamentals 1](py-fun1.md) 
-* [Python fundamentals 2](py-fun2.md)  
+* [The data mentality](data-mentality.md)
+* [Python fundamentals 1](py-fun1.md)
+* [Python fundamentals 2](py-fun2.md)
 * [Pandas 1:  Data input](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
 * [Updating Python:  Conda and Pip](conda-pip.md)
 
-<!-- 
+<!--
 * [Pandas 2:  Cleaning data](pandas-clean.md)
 * [Pandas 3:  Shaping data](pandas-shape.md)
 * [Pandas 4:  Grouping data](pandas-group.md)
@@ -22,6 +22,6 @@
 * [Other cool stuff](other.md)
 * [Practice](practice.md)
 * [Glossary](glossary.md)
---> 
+-->
 
 

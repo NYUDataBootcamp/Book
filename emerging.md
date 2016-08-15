@@ -12,11 +12,11 @@
 
 Include cases from Global....
 
-Data from 
+Data from
 
-* Penn World Table 
+* Penn World Table
 * World Bank
-* Doing Business 
+* Doing Business
 * Maddison
 
 ## Assessing the business climate

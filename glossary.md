@@ -1,9 +1,9 @@
-# Glossary 
+# Glossary
 
 
-function 
-list 
-package 
-slicing 
-string 
+function
+list
+package
+slicing
+string
 variable

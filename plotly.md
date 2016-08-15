@@ -21,7 +21,7 @@ charting library plotly.
 
 ## Reminders
 
-* Packages.  Collections of tools that extend Python's capabilities. We add them with `import` statements.  
+* Packages.  Collections of tools that extend Python's capabilities. We add them with `import` statements.
 * `conda` and `pip`: package managers for python. Install new packages using `conda install package_name` or `pip3 install package name`.
 
 We will need to have the plotly python package installed. To do this enter the
@@ -37,12 +37,12 @@ make sure plotly is installed properly.
 ```python
 import sys                             # system module
 import pandas as pd                    # data package
-import matplotlib.pyplot as plt        # graphics module  
+import matplotlib.pyplot as plt        # graphics module
 import datetime as dt                  # date and time module
 import numpy as np                     # foundation for Pandas
 import plotly as py                    # plotly
 
-%matplotlib inline                     
+%matplotlib inline
 
 # check versions (overkill, but why not?)
 print('Python version:', sys.version)
