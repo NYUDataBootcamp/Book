@@ -12,7 +12,7 @@ Related course materials are available at
 
 http://databootcamp.nyuecon.com/
 
-We welcome suggestions.  Send them to Dave Backus at [db3@nyu.edu](mailto:db3@nyu.edu).  Or, even better, post an issue on our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp_Book/issues).
+We welcome suggestions.  Send them to [Chase Coleman](mailto:cc7768@gmail.com) or [Spencer Lyon](mailto:spencerlyon2@gmail.com).  Or, even better, post an issue on our [GitHub repository](https://github.com/NYUDataBootcamp/Book/issues).
 
 
 ## Warning
@@ -26,5 +26,5 @@ This project was Glenn Okun's idea.  He really should have done it himself, but 
 
 ## License
 
-This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of our license see our [license](https://github.com/NYUDataBootcamp/Book/blob/master/LICENSE), or for more information visit the Creative Commons [website](http://creativecommons.org/licenses/by/4.0/).
+This work is licensed under the Creative Commons Attribution 4.0 International License.  The text of which can be found [here](https://github.com/NYUDataBootcamp/Book/blob/master/LICENSE), or, for more information about what it means, you should visit the Creative Commons [website](http://creativecommons.org/licenses/by/4.0/).
 

@@ -5,7 +5,7 @@
 
 **Buzzwords.** Questions, data, idea machines.
 
-**Code.** Related [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_examples.ipynb).
+**Code.** Related [examples](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_examples.ipynb)
 
 ---
 
@@ -67,9 +67,7 @@ If you're not sure how this works, watch Steve Levitt's [video](https://youtu.be
 
 Keep in mind:  we're not looking for a perfect idea. Perfection takes time, and we may never get there.  Long experience has shown us:
 
-<!--
 * **Start small.** Small ideas often grow into bigger ones.
--->
 
 * **Ideas have friends.**  If you have an idea, even a not very good one, it often triggers thoughts of other ideas, sometimes even better ones.
 
@@ -91,3 +89,4 @@ Keep in mind:  we're not looking for a perfect idea. Perfection takes time, and 
 Projects are less structured than most things you'll run across in school.  It's challenging, at first, to work with so little structure, but most students find that the freedom to develop their own projects is one of the most rewarding things they can do.
 
 **Exercise.**  Write down three project ideas.  Don't overthink this, one or two lines each will do.
+
