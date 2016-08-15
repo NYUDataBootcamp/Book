@@ -1,4 +1,4 @@
-# Bond yields 
+# Bond yields
 
 
 ---
@@ -11,13 +11,13 @@
 ---
 
 
-Bond yields 
+Bond yields
 
 
 
 Breakeven inflation
 
 
-# Resources 
+# Resources
 
-Animation:  https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/ 
+Animation:  https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/

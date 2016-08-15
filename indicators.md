@@ -2,43 +2,43 @@
 
 
 ---
-**Overview.** We often use economic data to assess (i) the economic climate, (ii) current economic conditions, and (iii) hints of forthcoming crises.  All of them are based on data that's widely available.  
+**Overview.** We often use economic data to assess (i) the economic climate, (ii) current economic conditions, and (iii) hints of forthcoming crises.  All of them are based on data that's widely available.
 
-**Python tools.**  FRED and World Bank APIs in Pandas.  
+**Python tools.**  FRED and World Bank APIs in Pandas.
 
-**Applications.**  
+**Applications.**
 
-**Code.** 
+**Code.**
 
 ---
 
 
-## Country indicators 
+## Country indicators
 
-Cases:  
+Cases:
 
 * Zambia's [Zambeef]
-* Europe 
+* Europe
 
 http://blogs.worldbank.org/opendata/visualizing-world-business-regulations
 
 
 
-## Business cycle indicators 
+## Business cycle indicators
 
 [Refer to Global Economy chapter or reproduce it?]
 
-Heatmap of indicators 
+Heatmap of indicators
 
-Radar chart 
-
-
-**Data revisions:** get FRED's data updates...  
+Radar chart
 
 
-## Crisis indicators 
+**Data revisions:** get FRED's data updates...
 
-Checklist:  
+
+## Crisis indicators
+
+Checklist:
 
 
 

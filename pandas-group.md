@@ -1,33 +1,33 @@
-# Pandas 3: Summary statistics 
+# Pandas 3: Summary statistics
 
 ---
-**Overview.**  stats, summaries, grouping 
+**Overview.**  stats, summaries, grouping
 
-**Python tools.**  
+**Python tools.**
 
-**Buzzwords.**  
+**Buzzwords.**
 
-**Applications.** 
+**Applications.**
 
-**Code.** Link.  
+**Code.** Link.
 
 ---
 
 
-mean etc 
+mean etc
 describe
-value counts 
+value counts
 
-groupby 
+groupby
 
 https://www.dropbox.com/s/7gepaazaoxgkllm/AirBnb%
 
-## Describing variables 
+## Describing variables
 
 `value_counts`
 
 
-## Grouping 
+## Grouping
 
 
 * Groupby:  http://pandas.pydata.org/pandas-docs/stable/groupby.html
