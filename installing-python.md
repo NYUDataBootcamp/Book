@@ -1,6 +1,5 @@
 # Installing Python
 
-
 ---
 **Overview.** We install Python, then run a test program to make sure it's working.
 
@@ -13,6 +12,7 @@
 ---
 
 Python is a programming language.  Like other computer languages, it comes with an ecosystem of related components. We refer to collections of components as **distributions.** We're going to use a specific distribution -- **Anaconda** -- that comes with lots of components in one user-friendly download.
+
 <!--
 One kind of component is a **package** that extends Python's capabilities.  A good analogy is an operating system, like Windows or Mac OS  You can't do much with either one until you install software "packages" like Word or Excel. Similarly, we will use packages in Python to manage data, create graphs, and compute statistics.  We're going to use a **distribution** called Anaconda, which bundles Python and a bunch of useful packages together in a single download.
 -->
@@ -23,7 +23,11 @@ We'll use two Python environments in this class:
 
  * **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.
 
- * **Jupyter** is a browser-based interface for running **IPython notebooks**, which combine code, output, and documentation.
+ * **Jupyter** is a browser-based interface for running **Jupyter notebooks**, which combine code, output, and documentation.
+
+<!--
+Once JupyterLab is sufficiently stable we could likely get away with only interacting with it (instead of Spyder and Jupyter Notebooks). This section (and others) will need an update once this happens.
+-->
 
 We will write and run Python programs in both environments.
 
@@ -41,39 +45,29 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 * Find the option for **Python 3.5.** **NOT** Python 2.7!  If you get 2.7, you'll have to start over.
 * Click the **64-bit Graphical Installer** to start the download.
 
-**Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says.
+**Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says (keep default options and make sure that it sets Anaconda as your default Python installation!).
 
-**Step 3. Find and run Launcher.**  Look wherever programs are on your computer.
+**Step 3. Find and run IPython.**  Look wherever programs are on your computer.
 
- * Windows:  Click on the Start button and type "Launcher" in the search box.
- * Macs: Finder, Spotlight Search, and Launchpad all work.
+ * Windows: Open the start menu by clicking the start button in the bottom left of your screen or by pressing the windows key. In the search box type "cmd" to open the command prompt. Once you have the command prompt open, type `conda -V`. It should tell you 4.x.y where x and y are just some numbers. Now type `ipython` to open a python session and type `print("Hello World")` and then `quit`
+ * Mac: open spotlight either by clicking the magnifying glass in the top right of your screen or pressing command and the space bar at the same time. Type “Terminal” and press enter. Once you have the terminal prompt open, type `conda -V`. It should tell you 4.x.y where x and y are just some numbers. Now type `ipython` to open a python session and type `print("Hello World")` and then `quit`
 
-<!--
-**Pro tip.**  Put a shortcut to Launcher in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop.
--->
+TODO: Change the figure below to be of opening the command prompt or mac terminal and the output of those commands
 
-Once Launcher is running -- be patient, it can take 60 seconds or more -- you should see something like this:
+![MacCommands](figs/Mac_Terminal_Commands.png "Mac")
 
-![Launcher](figs/anaconda_launcher.png "Launcher")
-
-<!--
- * Top left: A teardrop with a snake (an anaconda?) followed by the word Launcher.
- * Top middle: "Python 3.5.x." -- **NOT Python 2.7!!!**
- * Main window:  a list of apps, which are programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for writing and running Python programs.
--->
-
-If so, you now have Anaconda installed and ready to run.  Congratulations!
+If these commands worked and displayed something similar (version may be slightly different), you now have Anaconda installed and ready to run.  Congratulations!
 
 
 ## Coding environments
 
-Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  **Spyder**  and **Jupyter**.  We access both through Launcher, where Spyder is labelled "spyder-app" and Jupyter is labelled "ipython-notebook".  See the picture above.
+Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  **Spyder**  and **Jupyter**. We will access both of these through either the command prompt (Windows) or terminal (Mac) which can be opened as described above. In the steps that follow I will refer to "terminal" -- This is what it is called on a Mac, but, if you are on a Windows machine, please just replace the word terminal with the word command prompt everywhere in this section.
 
-If Launcher is open, great.  If not, please start it up (Step 3 above).
+If you still have a terminal open, great. If not, please open a new one (described in Step 3 above)
 
 **Spyder.**  Spyder is a graphical environment with an editor for writing programs, a console for trying out one line at a time, and access to help.  It’s our preferred Python environment. Experts often use other editors, but unless you’re one of them this is where you should start.
 
-To start Spyder from Launcher, **click on the blue Launch button** to the right of spyder-app. We find it a little slow, but it should start up eventually.  You should then see something that looks like this:
+To start Spyder from the terminal, simply type `spyder` into the terminal and hit enter. We find it can sometimes be a little slow to start, but it should start up eventually.  You should then see something that looks like this:
 
 ![Spyder environment](figs/spyder_plain.png "Spyder")
 
@@ -101,24 +95,14 @@ You see here that Spyder has a number of different components.  It's overwhelmin
 We can move these windows around by dragging and dropping.  If we mess up -- it happens to the best of us -- look for "View" at the top and click on "Reset window layout."
 
 
-**Jupyter.**  Jupyter is another graphical environment, which we use to create and run **IPython notebooks**. These notebooks combine code, output, words, and graphics.  It's a convenient format for presenting our work to others and can be used as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_examples.ipynb) [examples](http://nbviewer.jupyter.org/url/norvig.com/ipython/How%20to%20Do%20Things%20with%20Words.ipynb).
+**Jupyter.**  Jupyter is another graphical environment, which we use to create and run **Jupyter notebooks**. These notebooks combine code, output, words, and graphics.  It's a convenient format for presenting our work to others and can be used as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_examples.ipynb) [examples](http://nbviewer.jupyter.org/url/norvig.com/ipython/How%20to%20Do%20Things%20with%20Words.ipynb).
 
-To create or run an IPython notebook from Launcher, **click the blue Launch button** to the right of the ipython-notebook icon.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see something like this:
+To create or run an Jupyter notebook from the terminal, simply type `jupyter notebook` into the terminal and hit enter.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see something like this:
 
 ![Jupyter environment](figs/jupyter_plain.png "Jupyter")
 
-<!--
-at the top the word "Jupyter." (It used to say IPython, but now the same environment handles code in Julia, R, and other languages, which called for a [name change](http://ipython.org/#jupyter-and-the-future-of-ipython).)  Just below the word Jupyter you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.
--->
-
 
 **Exercise.**  Create a directory (folder) on your computer with the name `Data_Bootcamp` and store your programs there.  If you're not sure how to do this, let us know.  (And note well:  There is an **underscore** `"_"` between "Data" and "Bootcamp", not a blank space.)
-
-<!--
-By way of example, we have set up a Code directory in our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp) with separate Python and IPython subdirectories.  This is **mtwn** (more than we need), but since we'll be using the repository repeatedly it's worth taking a quick look now.
-
-Let's repeat that last part:  We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.
--->
 
 
 ## Run test programs
@@ -155,14 +139,13 @@ The output appears in the IPython console in the lower right corner.  If you get
 
 **More comments.** All of these are mtwn, but we thought they would make the code we just entered less mysterious -- and give us a head start with Python programming.  (i) Anything following a hash (#) is a comment and has no effect on what the program does.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.
 
+**IPython**.  We prefer to write code in an editor and will stick with Spyder for a few weeks. Jupyter notebooks serve a different purpose:  since they combine code with text and graphical output, they're well-suited for talks and reports.  We can generally read through them more easily than naked code.  Here are [three](http://savvastjortjoglou.com/nba-shot-sharts.html) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/NYUDataBootcamp/SQLBootcamp/blob/master/notebooks/SQL_Intro.ipynb) to make the point.
 
-**IPython**.  We prefer to write code in an editor and will stick with Spyder for a few weeks. IPython notebooks serve a different purpose:  since they combine code with text and graphical output, they're well-suited for talks and reports.  We can generally read through them more easily than naked code.  Here are [three](http://savvastjortjoglou.com/nba-shot-sharts.html) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/NYUDataBootcamp/SQLBootcamp/blob/master/notebooks/SQL_Intro.ipynb) to make the point.
-
-To run the same code in an IPython notebook, start the IPython/Jupyter app in Launcher, the one labeled "ipython-notebook".  (If you're not sure what this means, go back to the previous section.) Once you have it up and running:
+To run the same code in a Jupyter notebook, start the Jupyter notebook from the terminal.  (If you're not sure what this means, go back to the previous section.) Once you have it up and running:
 
 * Choose the directory. You should see the directory structure of your computer in Jupyter.  Navigate to the `Data_Bootcamp` directory (folder) you created earlier.
 
-* Create an IPython notebook.  Click on the "New" dropdown menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.
+* Create a Jupyter notebook.  Click on the "New" dropdown menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.
 
 * Set the file name.  To the right of the word Jupyter at the top, you'll see "Untitled".  Change it to `bootcamp_test`.
 
