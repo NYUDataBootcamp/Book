@@ -13,10 +13,6 @@
 
 Python is a programming language.  Like other computer languages, it comes with an ecosystem of related components. We refer to collections of components as **distributions.** We're going to use a specific distribution -- **Anaconda** -- that comes with lots of components in one user-friendly download.
 
-<!--
-One kind of component is a **package** that extends Python's capabilities.  A good analogy is an operating system, like Windows or Mac OS  You can't do much with either one until you install software "packages" like Word or Excel. Similarly, we will use packages in Python to manage data, create graphs, and compute statistics.  We're going to use a **distribution** called Anaconda, which bundles Python and a bunch of useful packages together in a single download.
--->
-
 One kind of component is a user-interface or **environment** for writing and executing code.  Here's an analogy: Word and Google docs are "environments" to produce text documents.  Both work.  We can use either one.  The same is true of Python environments; we use the one we find most convenient.  Think to yourself:  An environment is analogous to Microsoft Word and a Python program is analogous to a Word document.
 
 We'll use two Python environments in this class:
@@ -26,7 +22,7 @@ We'll use two Python environments in this class:
  * **Jupyter** is a browser-based interface for running **Jupyter notebooks**, which combine code, output, and documentation.
 
 <!--
-Once JupyterLab is sufficiently stable we could likely get away with only interacting with it (instead of Spyder and Jupyter Notebooks). This section (and others) will need an update once this happens.
+NOTE: Once JupyterLab is sufficiently stable we could likely get away with only interacting with it (instead of Spyder and Jupyter Notebooks). This section (and others) will need an update once this happens.
 -->
 
 We will write and run Python programs in both environments.

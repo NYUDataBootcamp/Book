@@ -6,7 +6,7 @@ We designed the book to accompany a live class.  We've tried to make it self-con
 
 The book comes in multiple formats.  You can access it on the internet.  Or you can download (and print) a pdf file.  The former comes with links, which we think is a huge advantage, and can be updated quickly, but if you like paper by all means try the pdf.  All of them are available at
 
-https://www.gitbook.com/book/davebackus/test/details
+https://www.gitbook.com/book/nyudatabootcamp/data-bootcamp/details
 
 Related course materials are available at
 
