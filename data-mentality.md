@@ -18,7 +18,6 @@ We study data because we want to learn something. But what? In our world, we mig
 
 You'll notice that **the starting point is a question**, something we'd like to know more about.  We provide a toolkit for working effectively with data to find answers.  Most of our examples are about economics and finance -- that's what we know -- but the same tools can be used to address any data we like.
 
-
 <!--
 Once we have a question, we can start looking for data that might help us come up with an answer. This leads to more questions:
 
@@ -26,7 +25,6 @@ Once we have a question, we can start looking for data that might help us come u
 * Where can we find it?
 * What should we do with it once we have it?
 -->
-
 
 ## Thinking about data
 

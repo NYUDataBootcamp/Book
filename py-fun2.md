@@ -52,7 +52,6 @@ The term **[data structure][5]** refers to the organization of a collection of d
 
 [5]: http://en.wikipedia.org/wiki/Data_structure
 
-
 **Dictionaries** are (unordered) pairs of things defined by curly brackets `{}`, separated by commas, with the items in each pair separated by colon.  For example, a list of first and last names:
 
 ```python
@@ -102,8 +101,7 @@ What are the keys here?  The values?  What do you think this dictionary represen
 
 Sometimes we want to do one thing if a condition is true, and another if it's false.  For example, we might want to use observations for which the date is after January 1980, the country is India, or the population is greater than 5 million -- and not otherwise.
 
-Python does this with **comparisons**, so called because they involve the comparison of one thing with another.  For example, the date of an observation with the date January 1980.  The result of a comparison is either `True` or `False`.  If we assign a comparison to a variable, we refer to it as a **Boolean**, a name derived from the 18th century mathematician and logician [George](https://espresso.economist.com/a3e8029408056a0791626262beb1e74d) [Boole](https://en.wikipedia.org/wiki/George_Boole). This gives us another type to add our collection:  float, integer, string, and now Boolean.
-
+Python does this with **comparisons**, so called because they involve the comparison of one thing with another.  For example, the date of an observation with the date January 1980.  The result of a comparison is either `True` or `False`.  If we assign a comparison to a variable, we refer to it as a **Boolean**, a name derived from the 18th century mathematician and logician [George](https://espresso.economist.com/a3e8029408056a0791626262beb1e74d) [Boole](https://en.wikipedia.org/wiki/George_Boole). This gives us another type to add our collection:  float, integer, string, list, dictionary, and now Boolean.
 
 Let's try some simple examples to see what we're dealing with.  Suppose we enter `1 > 0` in the IPython console.  What does this mean?  The input and output look like this:
 
@@ -114,7 +112,6 @@ Out[1]: True
 
 The comparison `1 > 0` is interpreted as a question:  Is 1 greater than 0?  The answer is `True`.  If we enter `1 < 0` instead,the answer is `False`.
 
-
 A comparison is a Python object, but what kind of object is it?  We can check with the `type()` function:
 
 ```python
@@ -123,29 +120,30 @@ type(1>0)
 
 The answer in this case is `bool` (that is, Boolean), the name we give to expressions that take the values `True` and `False`.  (Actually, it says `<class 'bool'>`, but `bool` is enough to make the point.)
 
-Python comes with a list of "operators" we can use in comparisons.  You can find the complete set in the [Python documentation](https://docs.python.org/3.4/library/stdtypes.html), but common ones include:
+Python comes with a list of "operators" we can use in comparisons.  You can find the complete set in the [Python documentation](https://docs.python.org/3/library/stdtypes.html), but common ones include:
 
 * Equals: `==`
 * Greater than: `>`
 * Greater than or equals: `>=`
 * Does not equal: `!=` (not equals).
 
-We can reverse comparisons with the word `not`.  For example:
+We can reverse comparisons (change true to false and vice-versa) with the word `not`.  For example:
+
 ```python
 In [2]: not 1>0
 Out[2]: False
 ```
-Think about that for a minute. And remind yourself that spaces don't matter in Python expressions.
-
+Think about that for a minute and evaluate it piece by piece. `1>0` returns `True` and `not True` is false. Additionally, remind yourself that spaces don't matter in Python expressions.
 
 We can do the same thing with variables.  Suppose we want to compare the values of variables `x` and `y`.  Which one is bigger?  To see how this works, we run the code
+
 ```python
 x = 2*3
 y = 2**3
 print('x greater than y is', x > y)
 ```
-Here `x = 6` and `y = 8`, so the expression `x > y` (is `x` greater than `y`?) is false.
 
+Here `x = 6` and `y = 8`, so the expression `x > y` (is `x` greater than `y`?) is false.
 
 **Exercise.**  What is `2 >= 1`?  `2 >= 2`?  `not 2 >= 1`? If you're not sure, try them in the IPython console and see what you get.
 
@@ -196,13 +194,12 @@ What are the values of `test1` and `test2`?  The expression `conditiona and cond
 
 Now that we know how to tell whether a comparison is true or false, we can build that into our code.  "Conditional" statements allow us to do different things depending on the result of a comparison or Boolean variable, which we refer to as a **condition**.  The logic looks like this:
 
-	if a condition is true, then do something.
-	if a conditions is false, do something else (or do nothing).
+  * if a condition is true, then do something.
+	* if a conditions is false, do something else (or do nothing).
 
 To repeat:  a condition here is a comparison or Boolean variable and is either true or false.
 
 <!--We use `if` to tell Python what to do if the condition is true, and `else` to do the same if the condition is false.  Picture a decision tree with two branches, one for true, one for false.  If Apple offers us a job, move to California.  If not, stay in New York.-->
-
 
 **`if` statements**  tell the program what to do if the condition is true:
 
@@ -218,7 +215,6 @@ The syntax here is precise:
 
 Both of these features -- a colon at the end of the first line, indent the rest four spaces -- show up in lots of Python code.  It's very compact, and the indentation makes the code easy to read.
 
-
 **Exercise.**  Change the code to
 
 ```python
@@ -227,7 +223,6 @@ if 1 < 0:
 ```
 
 What do you think happens?  Try it and see.
-
 
 Here's another example.  Again, we do something if the condition is true, nothing if the condition is false.  In this example, the condition is `x > 6`.  If it's true, we print the number.  If it's false, we do nothing.  The code is
 
@@ -242,9 +237,7 @@ print('Done!')
 
 Here we've set `x = 7`, which makes the condition `x > 6` true.  The `if` statement then directs the program to print `x`.  The blank lines are optional; they make the code easier to read, which is generally a good thing.  The statement `print('Done!')` is just there to tell us that the program finished.
 
-
 **Exercise.** What happens if we set `x = 4` at the top?  How do we know?
-
 
 **`else` statements** tell the program what to do if the condition is false.  If we want to do one thing if a condition is true and another if it is false, we would use `if` for the first and `else` for the second.  The second part has been missing so far.  Here's an example:
 
@@ -269,12 +262,9 @@ The `else` statement adds the second branch to the decision tree:  what to do if
 
 ## Slicing strings and lists
 
-
 We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, probably because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that **Python starts numbering at zero**.
 
-
 **Exercise.**  Take the string `a = 'some'`.  What is `a[1]`?
-
 
 What just happened?  Python starts numbering at zero.  If we want the first item/letter, we use `a[0]`.  If we want the second, we use `a[1]`.  And so on.  We can summarize the numbering convention by writing the word `some` on a piece of paper.  Below it, write the numbers, in order:  0, 1, 2, 3.  Label this row "counting forward."
 
@@ -282,12 +272,10 @@ We can also count backward, but again Python has its own numbering convention.  
 
 Let's track this "backward" numbering system in our example.  Below the "counting forward" numbers, start another row.  Below the letter `e` write -1.  As we move to the left, we type, -2, -3, -4.  Label this row "counting backward."
 
-
 **Exercise.** Take the string `firstname = 'Monty'` and write below it the forward and backward counting conventions.  What is the third letter (`n`) in each system?
 
 
 **Exercise.** Find the last letter of the string `lastname = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.
-
 
 We can do the same thing with lists, but the items here are the elements of a list rather than the characters in a string.  The counting works the same way.  Let's see if we can teach ourselves.
 
@@ -317,7 +305,6 @@ Let's go through this line by line:
 * The following line gives us `om`, the second and third letters.  Why?  Perhaps you figured it out.  If not, this is the logic:  the second number in `1:3`, namely `3`, is **one more than the end**.  So the range `1:3` gives us the second and third letters.  Confusing, for sure, but that's how it works.
 * The last line has no second number.  By convention it goes all the way to the end.  The slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.
 
-
 Some practice:
 
 **Exercise.** Set `lastname = 'Python'`. Extract the string `'thon'`.
@@ -325,7 +312,6 @@ Some practice:
 **Exercise.** Set `numlist = [1, 7, 4, 3]`. Extract the middle two items and assign them to the variable `middle`. Extract all but the first item and assign them to the variable `allbutfirst`.  Extract all but the last item and assign them to the variable `allbutlast`.
 
 **Exercise.**  Take the string `c = 'something'`.  What is `c[:3] + c[3:]`?
-
 
 
 ## Loops over lists and strings (`for`)
@@ -364,9 +350,7 @@ Note that `item` changes value as we go through the loop.  It's a variable whose
 
 We say here that we **iterate** over the items in the list and refer to the list as an **iterable**:  that is, something we can iterate over.  The terminology isn't important, but that's what it means if you run across it.
 
-
 **Exercise.** What happens if we replace `item` with `banana` in the code above?
-
 
 **Example.**  We use a loop to compute the sum of the elements of a list of numbers:
 ```python
@@ -374,13 +358,12 @@ numlist = [4, -2, 5]
 total = 0
 for num in numlist:
     total = total + num
-    
+
 print(total)
 ```
 The answer (of course) is 7.
 
 **Exercise.** Adapt the example to compute the average of the elements of `numlist`.
-
 
 We can also run loops over the characters in a string.  This one prints the letters in a word on separate lines:
 
@@ -391,8 +374,6 @@ for letter in word:
 ```
 
 (You might think we could come up with a more interesting example than this.  Sadly no, but we welcome suggestions.)
-
-
 
 **Example.**  Here's one that combines a `for` loop with an `if` statement to identify and print the vowels in a word:
 
@@ -405,7 +386,6 @@ for letter in word:
 ```
 
 (Adapted from [SciPy lecture 1.2](https://scipy-lectures.github.io/intro/language/control_flow.html#advanced-iteration).)  Describe what each line does as well as the overall result.
-
 
 **Example.** What about the consonants?  Note the word `not` below:
 
@@ -421,7 +401,7 @@ for letter in word:
 
 * Write a program that prints the elements of `stuff`.
 * Write a program that tells us the `type` of each element of `stuff`.
-* *Challlenging.* Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the function `type` returns the value `str`.
+* *Challenging.* Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the function `type` returns the value `str`.
 
 
 <!--
@@ -437,9 +417,7 @@ for letter in word:
 
 We now know how loops work.  Here's another version in which we loop over something a fixed number of times. For example, we might want to sum or average the values of a variable.  Or value a bond with a fixed number of coupon payments.  Or something.
 
-
 The new ingredient is the `range()` function. `range(n)` gives us all the integers (whole numbers) from `0` to `n-1`.  (If that sounds strange, remind yourself how slicing works.)  And `range(n1, n2)` gives us all the whole numbers from `n1` to `n2-1`.  We can use it in lots of ways, but loops are a prime example.
-
 
 Some examples illustrate how this works:
 
@@ -452,7 +430,6 @@ for number in range(5):     # the variable "number" can be anything
 
 It prints out the numbers 0, 1, 2, 3, and 4.  (Ask yourself:  Why doesn't it go to 5?)  This is like our earlier loops, but `range(5)` has replaced a list or string as the "iterable."
 
-
 Here's a minor variant:
 
 ```python
@@ -461,7 +438,6 @@ for number in range(2,5):
 ```
 
 It prints out the numbers 2, 3, and 4.
-
 
 **Example.** We compute and print the squares of integers up to ten.  ([Paul Ford](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) comments:  "Just the sort of practical, useful program that always appears in programming tutorials to address the needs of people who urgently require a list of squares.")   We do that with a `for` loop and the `range()` function:
 
@@ -472,7 +448,6 @@ for number in range(5):
 ```
 
 Again we start at zero and work our way up to four.
-
 
 **Example.** Here we compute the sum of integers from one to ten:
 
@@ -494,9 +469,7 @@ for num in range(10):
        print num
 ```
 
-
 **Exercise.**  Write a loop that computes the first five powers of two.
-
 
 **Example.**  Consider a bond that pays annual coupons for a given number of years (the maturity) and a principal of 100 at the end.  The yield-to-maturity is the rate at which these payments are discounted.  Given values for the coupon and the yield, the price of the bond is
 
@@ -515,9 +488,7 @@ print('The price of the bond is', price)
 
 The answer is 100, which we might know because the coupon and yield are the same once we convert the latter to a percentage.  Python gives us `99.99999999999997`, which is the computer's version of 100.
 
-
 **Digression.**  When we wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as `invalid syntax` with a warning sign to the left of the text.  Evidently the name `yield` is reserved for something else.  As general rule, it's a good idea to pay attention to the hints like this.
-
 
 **Loop with condition.**  Sometimes we want to go through a loop until some condition is met.  This combination of a loop and a condition requires an extra level of indenting.  It also introduces a new ingredient:  the `break` statement, which tells Python to exit the loop.
 
@@ -588,7 +559,6 @@ fruit6 = [item for item in fruit if len(item)<=6]
 
 It's easy to create our own functions -- experienced programmers do it all the time.  A common view is that we should never copy lines of code.  If we're copying, we're repeating ourselves.  What we should do instead is **write a function once and use it twice**.  More than that, breaking a long program into a small number of functions makes the code easier for others to read, which is always a good thing.  As we become more comfortable with Python we'll use functions more and more.
 
-
 **Defining functions.** The simplest functions have two components:  a **name** (what we call it) and a list of **input arguments**.  Here's an example:
 
 ```python
@@ -605,7 +575,6 @@ Let's go through this line by line:
 * The last line "calls" the function with input `Chase`.  Note that the name in the function's definition and its use need not be the same.
 
 By convention, Python aficionados put two blank lines before and after function definitions to make them stand out more clearly.  We use one here to save space.
-
 
 **Function returns.** Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x` later on. Here we print something but produce no other output.
 
@@ -639,7 +608,6 @@ print(both)
 Here we return the string `'Coleman, Chase'` and assign it to the variable `both`.  Note, too, the comment in triple quotes at the top of the function. That's standard procedure, we recommend it.
 
 The return is an essential component of many functions.  Typically when we read the documentation for a function or method, one of the first things we look for is what it returns.
-
 
 **Exercise.** Create and test a function that returns an arbitrary power of 2:  the input `n` (an integer) returns the output `2**n`.  Use `n=2` and `n=5` as test cases.
 
@@ -702,7 +670,7 @@ With that in mind, here are some guidelines we've found useful:
 * Lines should be no longer than 79 characters.
 * Skip two lines before and after a function definition.
 * Skip lines here and there where you think it makes sense.
-* Use comments whenever something isn't immediately obvious.
+* Use comments whenever something isn't immediately obvious (and sometimes even when it is).
 
 You can find more along these lines in the classic "[PEP8](https://www.python.org/dev/peps/pep-0008/)" and Google's [style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html).
 
@@ -780,7 +748,7 @@ Additional resources:
 * Udacity has a free [Introduction to Computer Science](https://www.udacity.com/courses/cs101) course that covers Python from a more technical perspective.  Recommended for people who want to understand the structure and logic of the language.
 * This is way [more about comprehensions](https://gist.github.com/bearfrieze/a746c6f12d8bada03589) than you ever wanted to know, but it's so beautifully done you might want to take a look.
 
-One last one, but only if you're curious about floating point numbers.  Ok, that's approximately no one.  Try this anyway and think about what's going on:
+One last one, but only if you're curious about floating point numbers.  Ok, that's approximately no one.  Try this anyway and think about what's going on (it also gives us an idea that we don't want to check for strict equality for floating point numbers -- Better to check whether they are close enough):
 
 ```python
 0.1 + 0.2 == 0.3
