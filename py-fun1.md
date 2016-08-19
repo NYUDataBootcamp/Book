@@ -21,10 +21,6 @@ The challenge and beauty of writing computer programs is that we need to be prec
 
 We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  There we can not only run code, we can access help.
 
-<!--
-Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "packages," "libraries," or "modules" that allow Python to do more advanced things -- data management and graphics, for example.  Think of them as plug-ins or extensions that we can call on when needed. We'll deal with them later.
--->
-
 ## Reminders
 
 Remind yourself about the following:
@@ -80,7 +76,7 @@ Out[1]: 6
 
 The first line is our input, we typed it.  The number in brackets `[1]` is a line number.  We don't type it, it's there in the console to begin with.  As we proceed the number [1] increases to [2], [3], and so on.  The second line -- the one that starts `Out[1]` -- is the response or output Python produces.
 
-The second calculation, `2 * 3`, does the same thing.  The spaces around the * don't change the output.  As a general rule, we can put spaces wherever we think they make the code more readable.
+The second calculation, `2 * 3`, does the same thing.  The spaces around the * don't change the output.  As a general rule, we can put spaces wherever we think they make the code more readable -- In fact, Python's [style guide](https://www.python.org/dev/peps/pep-0008/) encourages you to [use white space](https://www.python.org/dev/peps/pep-0008/#whitespace-in-expressions-and-statements) in a way that makes your code readable.
 
 The third calculation is division.  The input and output are
 
@@ -113,7 +109,7 @@ Out[5]: 8
 
 Our last calculation is the log function.  Entering `log(3)` generates the message:  `NameError: name 'log' is not defined`.   This is an example of a **syntax error**:  we have used language that Python doesn't understand.  Here the message is pretty clear:  it doesn't know what `log` means.  In other cases, the error message may be more mysterious.  We can use functions like `log` and `sqrt` in Python, just as we do in Excel, but we need to import them specially.  (And we will, but not yet.)
 
-**Exercise.**  What happens if you try to calculate the square root of 2 with `sqrt(2)`, as you would in Excel?  How would you do it?
+**Exercise.**  What happens if you try to calculate the square root of 2 with `sqrt(2)`, as you would in Excel?  How would you do it (You don't need to import it -- Hint: square root is a power)?
 
 
 ## Assigning values to variables
@@ -188,10 +184,7 @@ In [11]: print(z)
 0.6666666666666666
 ```
 
-Evidently this displays the value of `z`, namely `0.6666666666666666`.  We'll use print statements a lot to track the progress of our code.
-
-<!-- This is really helpful, because Python typically computes what we ask it to compute, but doesn't report the answer back to us.  That's how Python -- and other languages -- typically work.  If we want to report the result, we need to say so.
--->
+Evidently this displays the value of `z`, namely `0.6666666666666666`.  We will use print statements a lot to track the progress of our code. We need to do this because Python -- and all other programming languages -- will not report back the results of what we ask it to compute unless we tell it to do so.
 
 The print function displays whatever we include in parentheses after the word print:  for example, `print(x)`.  If we want to print more than one thing, we separate them with commas; for example, `print(x, y)`. That's the **general structure of functions** in Python:  a function name (in this case `print`) followed by inputs ("arguments" or "parameters") in parentheses that are separated by commas.  We usually refer to the `print()` function, with explicit parentheses, to remind ourselves that it requires input of some kind.
 
@@ -246,7 +239,7 @@ The third line is something new:  we add the string `some` to the string `thing`
 Strings also allow us to produce better-looking output.  In the previous section, for example, we can change the statement `print(z)` to `print('The value of z is ', z)`.  The first argument (or input), `'The value of z is '`, is a string.  The second argument, `z`, is a variable.  Together they produce the output `The value of z is  0.6666666666666666`, which is clearer than the number `0.6666666666666666` on its own.  Or we could spread this over two lines:
 
 ```python
-message = 'The value of z is'
+message = 'The value of z is '
 print(message, z)
 ```
 
@@ -314,7 +307,6 @@ print('z =', z)
 
 The separator `#%%` in the middle divides the file into two cells that we can run one at a time.  That allows us to run and test blocks of code without running the whole program.  It doesn't make much difference with code this simple, but in longer programs it can be a real time saver.
 
-
 Here's how it works:
 
 * In the Spyder editor, click on a code cell.  The cell will indicate its selection with a darker background.
@@ -326,19 +318,17 @@ Here's how it works:
 
 One of the rules of good code is that **we explain what we've done -- in the code**.  In this class, we might think about writing code that one of our classmates can understand without help.  These explanations are referred to as comments.
 
-
 Add a comment with the hash character (#).  Anything in a line after a hash is a comment, meaning it's ignored by Python.  Here are some examples:
 
 ```python
-# everything that appears after this symbol is a comment!
+# everything that appears after this symbol (in the same line) is a comment!
 # comments help PEOPLE understand the code, but PYTHON ignores them!
 # we're going to add 4 and 5
 4 + 5           # here we're doing it
 print(4+5)      # here we're printing it
 ```
 
-We often put comments like this in our code.  Not quite this basic, but close.
-
+We often put comments like this in our code.  Not quite this basic, but close. One of the unwritten "laws of nature" in programming is that code is read much more often than it is written [1](http://docs.python-guide.org/en/latest/writing/style/) [2](https://blogs.msdn.microsoft.com/oldnewthing/20070406-00/?p=27343) [3](https://blog.codinghorror.com/when-understanding-means-rewriting/). Writing informative comments will not only lead to others thanking you for saving them time, but you will find you thank yourself very frequently.
 
 **Exercise moving forward.** Practice writing comments **all the time**. Whenever you learn something new, write a comment explaining it in your code. It feels tedious, but the best coders always explain their work. It's a good habit to develop.
 
@@ -574,7 +564,6 @@ t = str(12.34)
 print('t has type', type(f))
 ```
 
-
 **Converting strings to lists.** One more type conversion:  We can convert a string to a list of its characters.  For example, we convert the string `x = abc'` to the list `['a', 'b', 'c']` with `list(x)`.  Run this code to see how it works:
 
 ```python
@@ -653,7 +642,6 @@ That's another way to get information about a method: try it and see what happen
 
 <!-- z = z.replace(',', '') -->
 
-
 **Exercise.**  Run the code
 
 ```python
@@ -667,7 +655,7 @@ Find a method to replace the n's in `firstlast` with asterisks.
 
 ## Python 2 and 3
 
-There's a lot of code around written in earlier versions of Python, most commonly Python 2.7.  It's there because the people who wrote it started before Python 3 was up and running.  Since we're starting from scratch, we are planting ourselves firmly in Python 3 territory.  Still, you're likely to run across examples of Python 2 on the internet. The easiest way to tell the difference is the print command:  `print(x)` in Python 3 was `print x` (no parentheses) in Python 2.  There are lots of other differences, which is why it's essential we all use Python 3.
+There's a lot of code around written in earlier versions of Python, most commonly Python 2.7.  It's there because the people who wrote it started before Python 3 was up and running.  Since we're starting from scratch, we are planting ourselves firmly in Python 3 territory.  Still, you're likely to run across examples of Python 2 on the internet. The easiest way to tell the difference is the print command:  `print(x)` in Python 3 was `print x` (no parentheses) in Python 2.  There are some other differences (more technical than we care to discuss), which is why it's essential we all use Python 3.
 
 
 ## Review
