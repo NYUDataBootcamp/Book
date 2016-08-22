@@ -21,10 +21,6 @@ We'll use two Python environments in this class:
 
  * **Jupyter** is a browser-based interface for running **Jupyter notebooks**, which combine code, output, and documentation.
 
-<!--
-NOTE: Once JupyterLab is sufficiently stable we could likely get away with only interacting with it (instead of Spyder and Jupyter Notebooks). This section (and others) will need an update once this happens.
--->
-
 We will write and run Python programs in both environments.
 
 This is a lot of jargon to swallow at one time.  Don't panic, it will become familiar with use.  And anything we don't use you can safely ignore.
@@ -41,14 +37,12 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 * Find the option for **Python 3.5.** **NOT** Python 2.7!  If you get 2.7, you'll have to start over.
 * Click the **64-bit Graphical Installer** to start the download.
 
-**Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says (keep default options and make sure that it sets Anaconda as your default Python installation!).
+**Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says (keep default options and make sure that **it sets Anaconda as your default Python installation!**).
 
 **Step 3. Find and run IPython.**  Look wherever programs are on your computer.
 
  * Windows: Open the start menu by clicking the start button in the bottom left of your screen or by pressing the windows key. In the search box type "cmd" to open the command prompt. Once you have the command prompt open, type `conda -V`. It should tell you 4.x.y where x and y are just some numbers. Now type `ipython` to open a python session and type `print("Hello World")` and then `quit`
  * Mac: open spotlight either by clicking the magnifying glass in the top right of your screen or pressing command and the space bar at the same time. Type “Terminal” and press enter. Once you have the terminal prompt open, type `conda -V`. It should tell you 4.x.y where x and y are just some numbers. Now type `ipython` to open a python session and type `print("Hello World")` and then `quit`
-
-TODO: Change the figure below to be of opening the command prompt or mac terminal and the output of those commands
 
 ![MacCommands](figs/Mac_Terminal_Commands.png "Mac")
 
@@ -77,7 +71,7 @@ You see here that Spyder has a number of different components.  It's overwhelmin
 
 * **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  This is where output from our programs will show up.  On startup it will display something like
 
-  ```python
+  ```
   Python 3.5.0 |Anaconda 2.4.0 (64-bit)
   etc etc
 
@@ -93,7 +87,7 @@ We can move these windows around by dragging and dropping.  If we mess up -- it 
 
 **Jupyter.**  Jupyter is another graphical environment, which we use to create and run **Jupyter notebooks**. These notebooks combine code, output, words, and graphics.  It's a convenient format for presenting our work to others and can be used as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_examples.ipynb) [examples](http://nbviewer.jupyter.org/url/norvig.com/ipython/How%20to%20Do%20Things%20with%20Words.ipynb).
 
-To create or run an Jupyter notebook from the terminal, simply type `jupyter notebook` into the terminal and hit enter.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see something like this:
+To create or run a Jupyter notebook from the terminal, simply type `jupyter notebook` into the terminal and hit enter.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see something like this:
 
 ![Jupyter environment](figs/jupyter_plain.png "Jupyter")
 
@@ -135,7 +129,7 @@ The output appears in the IPython console in the lower right corner.  If you get
 
 **More comments.** All of these are mtwn, but we thought they would make the code we just entered less mysterious -- and give us a head start with Python programming.  (i) Anything following a hash (#) is a comment and has no effect on what the program does.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.
 
-**IPython**.  We prefer to write code in an editor and will stick with Spyder for a few weeks. Jupyter notebooks serve a different purpose:  since they combine code with text and graphical output, they're well-suited for talks and reports.  We can generally read through them more easily than naked code.  Here are [three](http://savvastjortjoglou.com/nba-shot-sharts.html) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/NYUDataBootcamp/SQLBootcamp/blob/master/notebooks/SQL_Intro.ipynb) to make the point.
+**IPython**.  We prefer to write code in an editor and will stick with Spyder for a few weeks. Jupyter notebooks serve a different purpose:  since they combine code with text and graphical output, they're well-suited for talks and reports.  We can generally read through them more easily than naked code.  Here are [three](http://savvastjortjoglou.com/nba-shot-sharts.html) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/NYUDataBootcamp/SQLBootcamp/blob/b048ce3986128941d32bf20731a56c47e17daad0/notebooks/SQL_Intro.ipynb) to make the point.
 
 To run the same code in a Jupyter notebook, start the Jupyter notebook from the terminal.  (If you're not sure what this means, go back to the previous section.) Once you have it up and running:
 

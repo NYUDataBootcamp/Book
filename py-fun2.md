@@ -105,7 +105,7 @@ Python does this with **comparisons**, so called because they involve the compar
 
 Let's try some simple examples to see what we're dealing with.  Suppose we enter `1 > 0` in the IPython console.  What does this mean?  The input and output look like this:
 
-```python
+```
 In [1]:  1 > 0
 Out[1]: True
 ```
@@ -129,7 +129,7 @@ Python comes with a list of "operators" we can use in comparisons.  You can find
 
 We can reverse comparisons (change true to false and vice-versa) with the word `not`.  For example:
 
-```python
+```
 In [2]: not 1>0
 Out[2]: False
 ```
@@ -194,8 +194,8 @@ What are the values of `test1` and `test2`?  The expression `conditiona and cond
 
 Now that we know how to tell whether a comparison is true or false, we can build that into our code.  "Conditional" statements allow us to do different things depending on the result of a comparison or Boolean variable, which we refer to as a **condition**.  The logic looks like this:
 
-  * if a condition is true, then do something.
-	* if a conditions is false, do something else (or do nothing).
+* if a condition is true, then do something.
+* if a conditions is false, do something else (or do nothing).
 
 To repeat:  a condition here is a comparison or Boolean variable and is either true or false.
 

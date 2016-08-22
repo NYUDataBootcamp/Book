@@ -43,16 +43,6 @@ Many of our former students tell us that data skills keep them in business.  One
 
 We think Python is the language of choice right now if you want a user-friendly introduction to programming and a useful tool for day-to-day data work.  It's a high-level language, which means the language does a lot of the work.  It has a broad range of applications and an enormous community of users.  You'll come to appreciate both. And it's free and open source. Free means you pay nothing.  Open source means you can look at the code if you want to see how something works.
 
-<!--
-
-The closest competitors to Python for our purposes are probably [Matlab][2] and [R][3].  Matlab is a vector language, which means the kinds of things you do cell by cell in Excel you can do for a whole column or table in one line of code.  It was great in the 1980s, and we still use it for some things, but it's missing many of the convenient features of more modern languages.  It's not easy, for example, to read data straight from the internet. And functions must be stand-alone files, which gets annoying.  It's also expensive.  Outside universities, they price it with investment banks in mind.
-
-R would be our second choice for data work after Python.  Like Python, it's free and open source. It's the leading program among professional statisticians and has lots of  packages (add-ons) for data analysis. It's a great program, and it does lots of things, but it's not a general-purpose programming language. If you want to try it out, let us know, we can point you to some resources. The wildly popular [Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/), for example, combines R with an introduction to modern statistical methods.
-
-Python is our first choice.  Although it's a general purpose language, we'll use it for data work, where it has become an able competitor to R. Our focus is economic and financial data, but the same methods can be applied to data from any source, including proprietary business data.  One of our former students is using it to study patterns of survival on the [Titanic](http://www.kaggle.com/c/titanic-gettingStarted) and Neilsen television ratings. Another is using it to [process text](http://www.nltk.org/) from news sources and analyst reports.  Thanks to hedge fund [AQR and others](http://pandas.pydata.org/community.html#history-of-development), the data-analytic toolsets in Python now rival stat-focused languages like R.
-
-That's our opinion anyway, but the larger point is that learning a programming language - any language - is better than not learning one.  We'll use Python, but you could do similar things in R - and many do.  See also [this discussion](http://quant-econ.net/about_lectures.html#how-about-other-languages) from our friends Tom Sargent and John Stachurski.  Or [this one](http://www.dataschool.io/python-or-r-for-data-science/) from Kevin Markham. Or this [exchange](http://www.quora.com/Which-is-better-for-data-analysis-R-or-Python) on Quora.
--->
 
 ## Everyone likes Python
 
@@ -67,7 +57,7 @@ He's alluding here to the vast community of users who are developing tools that 
 
 ## Our approach
 
-There is a method to our madness. We will start quickly so that we can reach more interesting topics quickly -- On the bright side, this means that our workload will be heaviest when the workload of your other classes is lightest. We promise that it gets easier in spite of being a bit tough up front. These are some of our guiding principal's to put what is being taught into perspective.
+There is a method to our madness. We will start quickly so that we can reach more interesting topics quickly -- On the bright side, this means that our workload will be heaviest when the workload of your other classes is lightest. We promise that it gets easier in spite of being a bit tough up front. These are some of our guiding principles to put what is being taught into perspective.
 
 **One step at a time.** You can't do this in a day.  It pays to work on the fundamentals before moving on to advanced data tools. Our friend Tom Sargent preaches, "Don't skip steps." We try to follow this principal.
 
@@ -115,7 +105,7 @@ Here we'll say simply that all of the materials for this book and the associated
 * Website.  Everything is posted on our [class website](http://databootcamp.nyuecon.com/).
 * Book.  It's hosted by [GitBook](https://www.gitbook.com/book/nyudatabootcamp/data-bootcamp/details).
 * Code.  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/NYUDataBootcamp/Materials/tree/master/Code) of the GitHub repo.  If you save them, **remember to click on the Raw button** in the upper right.  (This is an oddity of GitHub, which distinguishes between a display of the file and the file iself.)
-* Other materials.  Pretty much everything else is available within a repository on our [GitHub organization](https://github.com/NYUDataBootcamp).
+* Other materials.  Pretty much everything else is available within a repository in our [GitHub organization](https://github.com/NYUDataBootcamp).
 
 [1]: https://en.wikipedia.org/wiki/Python_(programming_language)
 [2]: https://en.wikipedia.org/wiki/MATLAB

@@ -69,7 +69,7 @@ log(3)
 
 Type each one into the console, hit return, and look to see what happens.  The first one multiplies 2 times 3, and (hopefully) gives us 6 as the answer.  The input and output look like this in the console:
 
-```python
+```
 In [1]: 2*3
 Out[1]: 6
 ```
@@ -80,14 +80,14 @@ The second calculation, `2 * 3`, does the same thing.  The spaces around the * d
 
 The third calculation is division.  The input and output are
 
-```python
+```
 In [3]: 2/3
 Out[3]: 0.6666666666666666
 ```
 
 The fourth calculation, `2^3`, gives us
 
-```python
+```
 In [4]: 2^3
 Out[4]: 1
 ```
@@ -100,7 +100,7 @@ That makes this is a good time to practice our **Google fu**:
 
 We should find, after wading through the links, that exponents in Python are done this way:
 
-```python
+```
 In [5]: 2**3
 Out[5]: 8
 ```
@@ -133,7 +133,7 @@ We call statements like these **assignments**:  We assign a value to a variable.
 
 We can see the results of these assignments by checking the contents of the variables `x` and `y`.  In the IPython console, typing a variable and hitting return gives us its value. If we type `x` and `y`, one at a time, we get
 
-```python
+```
 In [7]: x
 Out[7]: 2
 In [8]: y
@@ -150,7 +150,7 @@ z = x/y
 
 If we type `z` in the console and hit return, we get
 
-```python
+```
 In [9]: z
 Out[9]: .666666666
 ```
@@ -167,7 +167,7 @@ What's going on here?  We take `x` (which now has a value of 2) and divide it by
 
 **Exercise (challenging).**  Type `x = 6` in the IPython console.  We've reassigned `x` so that its value is now 6, not 2. If we type and submit `z`, we see
 
-```python
+```
 In [10]: z
 Out[10]: .6666666666
 ```
@@ -179,7 +179,7 @@ But wait, if `z` is supposed to be `x/y`, and `x` now equals 6, then shouldn't `
 
 We saw that when we performed a calculation, such as `z = x/y`, we had to ask to see the result.  The `print()` function gives us another way to do that.  If we type `print(z)` in the IPython console, we get
 
-```python
+```
 In [11]: print(z)
 0.6666666666666666
 ```
@@ -190,7 +190,7 @@ The print function displays whatever we include in parentheses after the word pr
 
 So if we want to verify the calculation of `z`, we can type `print(z)` in the IPython console.  If we want to print all the calculations from the previous section, we can type `print(x, y, z)`:
 
-```python
+```
 In [12]: print(x, y, z)
 2 3 0.6666666666666666
 ```
@@ -328,7 +328,7 @@ Add a comment with the hash character (#).  Anything in a line after a hash is a
 print(4+5)      # here we're printing it
 ```
 
-We often put comments like this in our code.  Not quite this basic, but close. One of the unwritten "laws of nature" in programming is that code is read much more often than it is written [1](http://docs.python-guide.org/en/latest/writing/style/) [2](https://blogs.msdn.microsoft.com/oldnewthing/20070406-00/?p=27343) [3](https://blog.codinghorror.com/when-understanding-means-rewriting/). Writing informative comments will not only lead to others thanking you for saving them time, but you will find you thank yourself very frequently.
+We often put comments like this in our code.  Not quite this basic, but close. One of the unwritten "laws of nature" in programming is that code is read much more often than it is written [1](http://docs.python-guide.org/en/latest/writing/style/) [2](https://blogs.msdn.microsoft.com/oldnewthing/20070406-00/?p=27343) [3](https://blog.codinghorror.com/when-understanding-means-rewriting/). Writing informative comments will not only lead to others thanking you for saving them time, but you will find that you thank yourself very frequently.
 
 **Exercise moving forward.** Practice writing comments **all the time**. Whenever you learn something new, write a comment explaining it in your code. It feels tedious, but the best coders always explain their work. It's a good habit to develop.
 
