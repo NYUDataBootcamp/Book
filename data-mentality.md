@@ -5,7 +5,7 @@
 
 **Buzzwords.** Questions, data, idea machines.
 
-**Code.** Related [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_examples.ipynb).
+**Code.** Related [examples](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_examples.ipynb)
 
 ---
 
@@ -18,7 +18,6 @@ We study data because we want to learn something. But what? In our world, we mig
 
 You'll notice that **the starting point is a question**, something we'd like to know more about.  We provide a toolkit for working effectively with data to find answers.  Most of our examples are about economics and finance -- that's what we know -- but the same tools can be used to address any data we like.
 
-
 <!--
 Once we have a question, we can start looking for data that might help us come up with an answer. This leads to more questions:
 
@@ -26,7 +25,6 @@ Once we have a question, we can start looking for data that might help us come u
 * Where can we find it?
 * What should we do with it once we have it?
 -->
-
 
 ## Thinking about data
 
@@ -67,9 +65,7 @@ If you're not sure how this works, watch Steve Levitt's [video](https://youtu.be
 
 Keep in mind:  we're not looking for a perfect idea. Perfection takes time, and we may never get there.  Long experience has shown us:
 
-<!--
 * **Start small.** Small ideas often grow into bigger ones.
--->
 
 * **Ideas have friends.**  If you have an idea, even a not very good one, it often triggers thoughts of other ideas, sometimes even better ones.
 
@@ -91,3 +87,4 @@ Keep in mind:  we're not looking for a perfect idea. Perfection takes time, and 
 Projects are less structured than most things you'll run across in school.  It's challenging, at first, to work with so little structure, but most students find that the freedom to develop their own projects is one of the most rewarding things they can do.
 
 **Exercise.**  Write down three project ideas.  Don't overthink this, one or two lines each will do.
+
