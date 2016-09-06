@@ -1,15 +1,15 @@
-# Pandas 5:  Merging dataframes 
+# Pandas 5:  Merging DataFrames
 
 ---
-**Overview.** 
+**Overview.**
 
-**Python tools.**  
+**Python tools.**
 
-**Buzzwords.**  
+**Buzzwords.**
 
-**Applications.** 
+**Applications.**
 
-**Code.** Link.  
+**Code.** Link.
 
 ---
 
@@ -17,22 +17,22 @@
 
 ## Reminders
 
-DataFrames:  index, columns 
+DataFrames:  index, columns
 
 
 ## Wants
 
-MovieLens:  link id to title 
+MovieLens:  link id to title
 
-population estimates and projections.... 
+population estimates and projections....
 
-Emerging market indicators 
+Emerging market indicators
 
 
 ## More
 
 http://www.datacarpentry.org/python-ecology/04-merging-data
-http://chrisalbon.com/python/pandas_join_merge_dataframe.html
+http://chrisalbon.com/python/pandas_join_merge_DataFrame.html
 
 Apply to this (several datasets, we need to merge them)
 
