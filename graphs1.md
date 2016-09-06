@@ -9,7 +9,7 @@
 
 **Applications.**  US GDP, GDP per capita and life expectancy, Fama-French asset returns, PISA math scores.
 
-**Code.** [Link](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_graphics_1.ipynb).
+**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_graphics_1.ipynb).
 
 ---
 
@@ -93,7 +93,7 @@ Let's put some of these tools to work:
 
   Run this cell as well.
 
-You get the idea.  To get a sense of what's possible, take a look at these [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [notebooks](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).
+You get the idea.  To get a sense of what's possible, take a look at these [two](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_test.ipynb) [notebooks](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).
 
 
 **Markdown essentials.**  Markdown is a simplified version of html ("hypertext markup language"), the language used to construct basic websites.  html was a great thing in 1995, but now that the excitement has warn off we find it painful.  Markdown, however, has a zen-like simplicity and beauty.  Here are some things we can do with it:
@@ -128,7 +128,7 @@ You get the idea.  To get a sense of what's possible, take a look at these [two]
 We can find more information about Markdown under Help.  Or use your Google fu.  We like the [Daring Fireball](https://daringfireball.net/projects/markdown/) description.
 
 
-Markdown is ubiquitous.  This book, for example, is written in Markdown.  Look [here](https://github.com/DaveBackus/Data_Bootcamp_Book) for a list of chapter files.  Click on one to see how it displays.  Click on the Raw button at the top to see the Markdown file that produced it.
+Markdown is ubiquitous.  This book, for example, is written in Markdown.  Look [here](https://github.com/NYUDataBootcamp/Book) for a list of chapter files.  Click on one to see how it displays.  Click on the Raw button at the top to see the Markdown file that produced it.
 
 **IPython help.** We can access documentation just as we did in Spyder's IPython console:  Type a function or method and add a question mark.  For example:  `print?` or `df.plot?`.
 

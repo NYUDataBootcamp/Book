@@ -9,7 +9,7 @@
 
 **Applications.**  Income and output of countries, government debt, income by college major, old people, equity returns, George Clooney's movie roles.
 
-**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas-input.py).
+**Code.**  [Link](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/Python/bootcamp_pandas-input.py).
 
 ---
 
@@ -122,7 +122,7 @@ Some fine points:
 The easiest way to get data into a Python program is to read it from a file -- a spreadsheet file, for example.  The word "read" here means take what's in the file and somehow get it into Python so we can do things with it.  Pandas can read lots of kinds of files:  csv, xls, xlsx, and so on.  The files can be on our computer or on the internet.  We'll start with the internet -- there's less ambiguity about the location of the file -- but the same approach works with files on your computer.
 
 
-We prefer **csv files** ("comma separated values"), a common data format for serious data people.  Their simple structure (entries separated by commas) allows easy and rapid input. They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) with translating Excel files.  If we have an Excel spreadsheet, we can always save it as a "CSV (Comma delimited) (*.csv)" file.  Excel will warn us that some features are incompatible with the csv format, but we're generally happy to do it anyway.  Here's an example of a [raw csv file](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/test.csv) (pretty basic, eh?) and [this is](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) (roughly) how it's displayed in Excel.
+We prefer **csv files** ("comma separated values"), a common data format for serious data people.  Their simple structure (entries separated by commas) allows easy and rapid input. They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) with translating Excel files.  If we have an Excel spreadsheet, we can always save it as a "CSV (Comma delimited) (*.csv)" file.  Excel will warn us that some features are incompatible with the csv format, but we're generally happy to do it anyway.  Here's an example of a [raw csv file](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Data/test.csv) (pretty basic, eh?) and [this is](https://github.com/NYUDataBootcamp/Materials/blob/master/Data/test.csv) (roughly) how it's displayed in Excel.
 
 <!--
   https://twitter.com/aejolene/status/700373933141401600
@@ -132,8 +132,8 @@ We prefer **csv files** ("comma separated values"), a common data format for ser
 
 ```python
 import pandas as pd
-url1 = 'https://raw.githubusercontent.com/DaveBackus'
-url2 = '/Data_Bootcamp/master/Code/Python/test.csv'
+url1 = 'https://raw.githubusercontent.com/NYUDataBootcamp'
+url2 = '/Materials/master/Data/test.csv'
 url  = url1 + url2        # location of file
 df = pd.read_csv(url)     # read file and assign it to df
 ```
@@ -164,7 +164,7 @@ So what does our read statement give us?  What's in `df`?  We can check its cont
 2  Spencer   5   6   7
 ```
 
-What we have is a table, much like what we'd see in a spreadsheet.  If we compare it to the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) we see that the first column is new, added somehow by the program, but the others are just as they look in the source.
+What we have is a table, much like what we'd see in a spreadsheet.  If we compare it to the [source](https://github.com/NYUDataBootcamp/Materials/blob/master/Data/test.csv) we see that the first column is new, added somehow by the program, but the others are just as they look in the source.
 
 Note that the table of data has labels for both the columns and rows.  We'll do more with both of them shortly.
 
@@ -199,8 +199,8 @@ We see that the number 1 that was formerly at the top of the `x1` column has bee
 
 ```python
 import pandas as pd
-url1 = 'https://raw.githubusercontent.com/DaveBackus'
-url2 = '/Data_Bootcamp/master/Code/Python/test.xls'
+url1 = 'https://raw.githubusercontent.com/NYUDataBootcamp'
+url2 = '/Materials/master/Data/test.xls'
 url  = url1 + url2
 dfx = pd.read_excel(url)
 print('\n', dfx)
@@ -211,8 +211,8 @@ If all goes well, the modified code produces a dataframe `dfx` that's identical 
 **Exercise.**  Run the code
 
 ```python
-url1 = 'https://raw.githubusercontent.com/DaveBackus'
-url2 = '/Data_Bootcamp/master/Code/Python/test0.csv'    # note the added 0
+url1 = 'https://raw.githubusercontent.com/NYUDataBootcamp'
+url2 = '/Materials/master/Data/test0.csv'    # note the added 0
 url  = url1 + url2
 df = pd.read_csv(url)
 ```
@@ -238,7 +238,7 @@ Typically columns are variables and the column labels give us their names.  In o
 **Dimensions.** We access a dataframe's dimensions -- the numbers of rows and columns -- with the `shape` method:  `df.shape`.  Here the answer is `(3,4)`, so we have 3 rows (observations) and 4 columns (variables).
 
 
-**Columns and indexes.**  We access the column and row labels directly.  For the dataframe `df` we read in earlier, we extract column labels with the `columns` method:  `df.columns`.  That gives us the verbose output `Index(['name', 'x1', 'x2', 'x3'], dtype='object')`.  If we prefer to have them as a list, we use `list(df)`.  That gives us the column names as a list:  `['name', 'x1', 'x2', 'x3']`.  If we check the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv), we see that the column labels come from the first row of the file.
+**Columns and indexes.**  We access the column and row labels directly.  For the dataframe `df` we read in earlier, we extract column labels with the `columns` method:  `df.columns`.  That gives us the verbose output `Index(['name', 'x1', 'x2', 'x3'], dtype='object')`.  If we prefer to have them as a list, we use `list(df)`.  That gives us the column names as a list:  `['name', 'x1', 'x2', 'x3']`.  If we check the [source](https://github.com/NYUDataBootcamp/Materials/blob/master/Data/test.csv), we see that the column labels come from the first row of the file.
 
 
 The row labels are referred to as the **index**.  We extract them with the `index` method:  `df.index`.  That gives us the verbose output `Int64Index([0, 1, 2], dtype='int64')`.  We can convert it to a list by adding another method, `df.index.tolist()`, which gives us `[0, 1, 2]`.  (Cool! Two methods strung together!)  In this case, the index is not part of the original file; Pandas inserted a counter.  As usual in Python, the counter starts at zero.
@@ -595,14 +595,14 @@ Once we know the directory path, we can use it in Python.
 
   ```python
   import os
-  
+
   file = 'test.csv'
   cwd  = 'C:/Users/userid/Data_Bootcamp'
-  
+
   os.chdir(cwd)                                 # set current working directory
   print('Current working directory is', os.getcwd())
   print('File exists?', os.path.isfile(file))   # check to see if file is there
-  
+
   df = pd.read_csv(file)
   ```
 
@@ -614,14 +614,14 @@ http://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else
 
   ```python
   import os
-  
+
   file = 'test.csv'
   cwd  = '/Users/userid/Data_Bootcamp'
-  
+
   os.chdir(cwd)                                 # set current working directory
   print('Current working directory is', os.getcwd())
   print('File exists?', os.path.isfile(file))   # check to see if file is there
-  
+
   df = pd.read_csv(file)
   ```
 
@@ -839,7 +839,7 @@ http://insideairbnb.com/get-the-data.html
 
 **Example (Big Mac currency index).**  This is an xls file with multiple sheets.
 http://infographics.economist.com/2015/databank/BMfile2000-Jul2015.xls
- 
+
 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/27893
 
 Papers:  https://scholar.google.com/scholar?hl=en&q=fisman+speed+dating&btnG=&as_sdt=1%2C33
@@ -1022,5 +1022,3 @@ Cookbook:  http://pandas.pydata.org/pandas-docs/stable/tutorials.html#pandas-coo
 
 Pandas plotting methods:  http://pandas.pydata.org/pandas-docs/version/0.10.1/visualization.html#autocorrelation-plot
 -->
-
-
