@@ -7,7 +7,7 @@
 
 **Buzzwords.**  Code block, data structures, list comprehension, gotcha, PEP8.
 
-**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_2.py).
+**Code.**  [Link](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/Python/bootcamp_fundamentals_2.py).
 
 ---
 
@@ -759,4 +759,3 @@ False?  More [here](http://blog.reverberate.org/2016/02/06/floating-point-demyst
 <!--
 http://squishythinking.com/2014/02/22/bisecting-floats/
 -->
-
