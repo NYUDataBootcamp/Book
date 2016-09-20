@@ -272,14 +272,14 @@ We can also count backward, but again Python has its own numbering convention.  
 
 Let's track this "backward" numbering system in our example.  Below the "counting forward" numbers, start another row.  Below the letter `e` write -1.  As we move to the left, we type, -2, -3, -4.  Label this row "counting backward."
 
-**Exercise.** Take the string `firstname = 'Monty'` and write below it the forward and backward counting conventions.  What is the third letter (`n`) in each system?
+**Exercise.** Take the string `firstname = 'Monty'` and write below it the forward and backward counting conventions.  What integer would you put in square brackets to extract the third letter (`n`) under each system?
 
 
 **Exercise.** Find the last letter of the string `lastname = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.
 
 We can do the same thing with lists, but the items here are the elements of a list rather than the characters in a string.  The counting works the same way.  Let's see if we can teach ourselves.
 
-**Exercise.** Take the list `numberlist = [1, 5, -3]`.  Use slicing to set a variable `first` equal to the first item.  Set another variable `last` equal to the last item.  Set a third variable `middle` equal to the middle item.
+**Exercise.** Take the list `numberlist = [1, 5, -3]`.  Use slicing to set a variable `first` equal to the first item.  Set another variable `last` equal to the last item.  Set a third variable named `middle` equal to the middle item.
 
 
 ## More slicing
@@ -401,7 +401,7 @@ for letter in word:
 
 * Write a program that prints the elements of `stuff`.
 * Write a program that tells us the `type` of each element of `stuff`.
-* *Challenging.* Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the function `type` returns the value `str`.
+* *Challenging.* Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the print the elements where function `type` returns the value `str`.
 
 
 <!--
@@ -433,7 +433,7 @@ It prints out the numbers 0, 1, 2, 3, and 4.  (Ask yourself:  Why doesn't it go 
 Here's a minor variant:
 
 ```python
-for number in range(2,5):
+for number in range(2, 5):
     print(number)
 ```
 
@@ -442,7 +442,7 @@ It prints out the numbers 2, 3, and 4.
 **Example.** We compute and print the squares of integers up to ten.  ([Paul Ford](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) comments:  "Just the sort of practical, useful program that always appears in programming tutorials to address the needs of people who urgently require a list of squares.")   We do that with a `for` loop and the `range()` function:
 
 ```python
-for number in range(5):
+for number in range(1, 11):
     square = number**2
     print('Number and its square:', number, square)
 ```
@@ -453,8 +453,8 @@ Again we start at zero and work our way up to four.
 
 ```python
 total = 0
-for num in range(1,11):
-    total = total+ num
+for num in range(1, 11):
+    total = total + num
 
 print(total)
 ```
@@ -480,15 +480,15 @@ ytm = 0.05 				# yield to maturity
 
 price = 0
 for year in range(1, maturity+1):
-    price = price + coupon/(1+ytm)**year
+    price = price + coupon/((1+ytm)**year)
 
-price = price + 100/(1+ytm)**maturity
+price = price + 100/((1+ytm)**maturity)
 print('The price of the bond is', price)
 ```
 
 The answer is 100, which we might know because the coupon and yield are the same once we convert the latter to a percentage.  Python gives us `99.99999999999997`, which is the computer's version of 100.
 
-**Digression.**  When we wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as `invalid syntax` with a warning sign to the left of the text.  Evidently the name `yield` is reserved for something else.  As general rule, it's a good idea to pay attention to the hints like this.
+**Digression.**  When we originally wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as `invalid syntax` with a warning sign to the left of the text.  Evidently the name `yield` is reserved for [something else](https://pythontips.com/2013/09/29/the-python-yield-keyword-explained/).  As general rule, it's a good idea to pay attention to the hints like this.
 
 **Loop with condition.**  Sometimes we want to go through a loop until some condition is met.  This combination of a loop and a condition requires an extra level of indenting.  It also introduces a new ingredient:  the `break` statement, which tells Python to exit the loop.
 
@@ -517,7 +517,7 @@ Let's review:
 
 ## List comprehensions
 
-That's a mouthful of jargon, but the idea is that we can create lists (and do related things) using implicit loops that we refer to as **list comprehensions**.  This is incredibly useful and shows up a lot in Python code.  It's another thing that doesn't work in Python 2, so make sure you have Python 3 installed.
+That's a mouthful of jargon, but the idea is that we can create lists (and do related things) using implicit loops that we refer to as **list comprehensions**.  This is incredibly useful and shows up a lot in Python code.
 
 **Example.** Consider the loop above that prints out the elements of the list `namelist` one at a time:
 
@@ -574,8 +574,6 @@ Let's go through this line by line:
 * The following statement(s) are indented the usual four spaces and specify what the function does.  In this case, it prints `Hello,` followed by whatever `firstname` happens to be.  Python understands that the function ends when the indentation ends.
 * The last line "calls" the function with input `Chase`.  Note that the name in the function's definition and its use need not be the same.
 
-By convention, Python aficionados put two blank lines before and after function definitions to make them stand out more clearly.  We use one here to save space.
-
 **Function returns.** Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x` later on. Here we print something but produce no other output.
 
 In other cases, we might want to send output back to the main program.  We do that with a **return** statement, a third component of a function definition.  Here's an example
@@ -583,7 +581,7 @@ In other cases, we might want to send output back to the main program.  We do th
 ```python
 def squareme(number):
     """
-    Function takes numerical input and returns its square
+    Takes numerical input and returns its square
     """
     return number**2        # this is what the function sends back
 
@@ -596,7 +594,7 @@ And here's another one:
 ```python
 def combine(first, last):
 	"""
-	Function takes strings 'first' and 'last' and returns new string 'last, first'
+	Takes strings 'first' and 'last' and returns new string 'last, first'
 	"""
 	lastfirst = last + ', ' + first
     return lastfirst                    # this is what the function sends back
