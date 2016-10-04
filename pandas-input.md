@@ -15,10 +15,9 @@
 
 We're ready now to look at some data.  Lots of data.  You will need an **internet connection** for much of it.
 
-You may recall that our typical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first -- data input -- but touch briefly on the second and third.  More concretely, we explain how to get spreadsheet data into Python.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.
+You may recall that our typical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first -- data input -- but touch briefly on the second and third.  More concretely, we explain how to get spreadsheet data into Python.  We'll review how  Python uses collections of tools or plug-ins called **packages** to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.
 
 The Pandas package is (even) more **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** than core Python in the sense of putting a lot of the programming details out the way.  That makes it both easier to use -- lots of things are automated -- but in some cases also a bit more mysterious.  All together, though, it's an incredibly powerful collection of data tools.
-
 
 ## Reminders
 
@@ -32,95 +31,7 @@ The Pandas package is (even) more **[high-level](https://en.wikipedia.org/wiki/H
 
 * Function returns.  We refer to the output of a function as its **return**.  We would say, for example, that the function `type(x)` `return`s the type of the input object `x`.  We capture the return with an assignment:  `xtype = type(x)`.
 
-
-## Python packages
-
-Python is not just a programming language, it's an open source collection of tools that includes both core Python and a large collection of packages written by different people.  The word **package** here refers to plug-ins or extensions that expand Python's capabilities.  Terminology varies.  What we call a package others sometimes call a "library."  The term "module" typically refers to a subset of core Python or one of its packages.  You won't go far wrong to use the terms interchangeably.
-
-The standard Python packages are well written, well documented, and well supported.  They have armies of users who spot and correct problems.  Some of the others less so.  For the most part, we stick to the standard packages, specifically those that come with the Anaconda distribution.
-
-Some of the leading packages for numerical ("scientific") computation are
-
-* **[Pandas](http://pandas.pydata.org/).**  The leading package for managing data and our focus in this chapter.
-
-* **[Matplotlib](http://matplotlib.org/).**  The leading graphics package.  We'll use it extensively.
-
-* **[NumPy](http://www.numpy.org/).**  Tools for numerical computing.  In Excel the basic unit is a cell, a single number.  In NumPy the basic unit is a vector (a column) or matrix (a table or worksheet), which allows us to do things with an entire column or table in one line.  This facility carries over to Pandas.
-
-All of these packages come with the [Anaconda distribution](http://docs.continuum.io/anaconda/pkg-docs.html), which means we already have them installed and ready to use.
-
-Pandas is an essential part of data work in Python.  Its [authors describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, construct pivot tables, and lots of other things.  And we can do all this with much larger files than Excel can handle.
-
-<!--
-Here are some others you might run across:
-
-* **[Seaborn](http://stanford.edu/~mwaskom/software/seaborn/).** A "wrapper" (isn't that a great term?) for Matplotlib that makes it easier to use.
-
-* **[Statsmodels](https://pypi.python.org/pypi/statsmodels).**  The basic statistics package.
-
-* **[Scikit-learn](http://scikit-learn.org/stable/).** A package for "[machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)," which is the name computer scientists give to data work.  CS people have done some cool things with data.  They're also really good at naming things:  machine learning, visualization, support vector machines, random forests.
-
-* **[NLTK](http://www.nltk.org/).**  The so-called Natural Language Toolkit processes text.  Here "natural language" means "words."  Investors, for example, might process the words used in financial reports to detect mood or sentiment.  One of our students is using NLTK to analyze tweets.  The big-picture idea is that data can be anything, not just numbers.
-
-* **[Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/)** and **[Scrapy](http://scrapy.org/).**  Extract ("scrape") data from web sites.
-
-* **[Django](https://www.djangoproject.com/).**  A popular tool for website development.
-
-We won't use them, but they're in Anaconda, too.  Feel free to give them a try.  If you do, please report back on your experience.
--->
-
-
-## Importing packages
-
-In Python we need to tell our program which packages we plan to use.  We do that with an `import` statement.
-
-Here are some examples applied to a mythical package `xyz` and mythical function `foo`:
-
-* `import xyz`.  This imports the package `xyz`. A function `foo` in package `xyz` is then executed with `xyz.foo()`
-
-* `import xyz as x`.  This also imports the package `xyz`, but under the abbreviation `x`.  Here `foo` is executed with `x.foo()`.  This is the most common syntax and the one we'll generally use.  With Pandas, for example, the standard import statement is `import pandas as pd`.
-
-* `from xyz import foo`.  This imports the `foo` function directly so it can be called with `foo()`. Note in this case that if we had another function `bar` in the `xyz` package we wouldn't not be able to call it without importing the `bar` function like we did `foo`, or imported the `xyz` module itself using one of the methods above.
-
-* `from xyz import *`.  This imports all the functions and methods from the package `xyz`, but here the function `foo` is executed simply by typing `foo`.  We don't usually do this, because it opens up the possibility that the same function exists in more than one package, which is virtually guaranteed to create confusion.
-
-We'll see these examples repeatedly:
-
-```python
-import pandas as pd                  # data package
-import matplotlib.pyplot as plt      # graphics package
-```
-
-You might also go through earlier chapters and identify the `import` statements you find.  By convention, they are placed at the top of the program.  What packages or modules have we used?  What do they do?
-
-Some fine points:
-
-* Redundancy.  What happens if we issue an import statement twice?  Answer:  Nothing, no harm done.
-
-* Jokes.  These are programmer jokes, which might be a contradiction in terms, but try them and see what happens:
-
-  ```python
-  import this
-  ```
-
-  ```python
-  import antigravity
-  ```
-
-* Versions.  We can check the version number of a package with  `package.__version__`.  To check the version of Pandas you have installed, try
-
-  ```python
-  import pandas as pd
-  print('Pandas version ', pd.__version__)   	# these are double underscores
-  ```
-
-  This can be helpful if we're trying to track down an error.
-
-
-**Exercise.**  Import Pandas.  What version do you have?
-
-**Exercise.**  What happens if we import Pandas twice under different names, once with `import pandas as pd` and once with `import pandas as pa`?  Write a short program that tests your conjecture.  *Hint:* Use what have we done with Pandas so far.
-
+* Packages. Packages are collections of tools -- functions and types/methods -- that extend Python's capabilities. We import a package using an `import` statement or some combination of `import`, `from`, and `as`.
 
 ## Data input 1:  reading internet files
 
