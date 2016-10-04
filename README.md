@@ -1,6 +1,6 @@
 ## Preface
 
-This GitBook was written by David Backus, Sarah Beckett-Hile, Chase Coleman, and Spencer Lyon for [a course](http://databootcamp.nyuecon.com/) at [NYU](http://www.nyu.edu/)'s [Stern School of Business](http://www.stern.nyu.edu/).  The idea is to give students experience with economic and financial data and introduce programming newbies to the benefits of moving beyond Excel.  We use the Python programming language, specifically Python's data management and graphics tools.  If that doesn't whet your appetite, we have a [more elaborate sales pitch](http://databootcamp.nyuecon.com/bootcamp_faq/).
+This GitBook was written by David Backus, Sarah Beckett-Hile, Chase Coleman, and Spencer Lyon for [a course](http://databootcamp.nyuecon.com/) at [NYU](http://www.nyu.edu/)'s [Stern School of Business](http://www.stern.nyu.edu/).  The idea is to give students experience with economic and financial data and introduce programming newbies to the benefits of moving beyond Excel.  We use the Python programming language, specifically Python's data management and graphics tools.  If that doesn't whet your appetite, we have a [more elaborate sales pitch](http://databootcamp.nyuecon.com/faq/).
 
 We designed the book to accompany a live class.  We've tried to make it self-contained, but the written word is a poor substitute for the interaction you get in a classroom.
 
@@ -27,4 +27,3 @@ This project was Glenn Okun's idea.  He really should have done it himself, but 
 ## License
 
 This work is licensed under the Creative Commons Attribution 4.0 International License.  The text of which can be found [here](https://github.com/NYUDataBootcamp/Book/blob/master/LICENSE), or, for more information about what it means, you should visit the Creative Commons [website](http://creativecommons.org/licenses/by/4.0/).
-
