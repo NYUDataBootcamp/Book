@@ -44,7 +44,7 @@ Here are some other packages you might run across:
 
 * **[Django](https://www.djangoproject.com/).**  A popular tool for website development.
 
-We won't use most of them them, but they're in Anaconda, too.  Feel free to give them a try.  If you do, please report back on your experience.
+We won't use most of them them, but they're in Anaconda too.  Feel free to give them a try.  If you do, please report back on your experience.
 
 ## Importing packages
 
