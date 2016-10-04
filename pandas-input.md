@@ -31,7 +31,7 @@ The Pandas package is (even) more **[high-level](https://en.wikipedia.org/wiki/H
 
 * Function returns.  We refer to the output of a function as its **return**.  We would say, for example, that the function `type(x)` `return`s the type of the input object `x`.  We capture the return with an assignment:  `xtype = type(x)`.
 
-* Packages. Packages are collections of tools -- functions and types/methods -- that extend Python's capabilities. We import a package using an `import` statement or some combination of `import`, `from`, and `as`.
+* Packages. Packages are collections of tools -- functions and types/methods -- that extend Python's capabilities. We import a package using an `import` (e.g. `import pandas`) statement or some combination of `import`, `from`, and `as` (e.g. `import pandas as pd` or `from pandas import DataFrame`).
 
 ## Data input 1:  reading internet files
 
