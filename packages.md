@@ -28,7 +28,7 @@ All of these packages come with the [Anaconda distribution](http://docs.continuu
 
 Pandas is an essential part of data work in Python.  Its [authors describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, construct pivot tables, and lots of other things.  And we can do all this with much larger files than Excel can handle.
 
-**Moret than you need**
+**More than you need**
 
 Here are some other packages you might run across:
 
