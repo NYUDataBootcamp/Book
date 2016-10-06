@@ -169,11 +169,12 @@ pce  = [8867.6, 9208.2, 9531.8, 9821.7, 10041.6, 10007.2, 9847.0, 10036.3,
         10263.5, 10449.7, 10699.7]
 year = list(range(2003,2014))        # use range for years 2003-2013
 
+# Note that we set the index
 us = pd.DataFrame({'gdp': gdp, 'pce': pce}, index=year)
 print(us)
 ```
 
-Note that we created a dataframe from a dictionary.  That's convenient here, but in most real applications we'll read in spreadsheets or access the data online through an "API" (more on this later).
+Note that we created a dataframe from a dictionary.  That's convenient here, but in most real applications we'll read in spreadsheets or access the data online through an "API".
 
 
 *World Bank.* Our second dataframe contains 2013 data for GDP per capita (basically income per person) for several countries:
@@ -240,15 +241,15 @@ If we compare this to Excel, we will see that a number of things are preset for 
 
 * Data.  By default (meaning, if we don't do anything to change it) the data consists of the whole dataframe.
 * Chart type.  We'll see below that we have options for lines, bars, or other things.
-* `x` and `y` variables.  By default, the `x` variable is the dataframe's index and the `y` variables are the columns of the dataframe -- all of them.
+* `x` and `y` variables.  By default, the `x` variable is the dataframe's index and the `y` variables are the columns of the dataframe -- all of them that can be plotted (e.g. columns with a numeric dtype).
 
 We can change all of these things, just as we can in Excel, but that's the starting point.
-
 
 **Example (line plot).**  Enter the statement `us.plot()` into a code cell and run it.  This plots every column of the dataframe `us` as a line against the index, the year of the observation.  The lines have different colors.  We didn't ask for this, it's built in.  A legend associates each variable name with a line color.  This is also built in.
 
 **Example (single line plot).**  We just plotted all the variables -- all two of them -- in the dataframe `us`.  To plot one line, we apply the same method to a single variable -- a series.  The statement `us['gdp'].plot()` plots GDP alone.  The first part -- `us['gdp']` -- is the single variable GDP.  The second part -- `.plot()` -- plots it.
 
+**Example (single line plot 2)**. In addition to getting a series from our dataframe and then plotting the series, we could also set the `y` argument when we call the plot method. The statement `us.plot(y="gdp")` will produce the same plot as `us['gdp'].plot()`.
 
 **Example (bar chart).**  The statement `us.plot(kind='bar')` produces a bar chart of the same data.
 
@@ -320,12 +321,6 @@ plt.plot(x, y)
 
 The `plt.` prefix identifies `plot()` as a pyplot function.   This produces the same kinds of figures we saw earlier, but we get there by a different route.
 
-
-<!--
-**Digression.** We're doing this in an Jupyter notebook, where it will work fine.  But if we use the same code in Spyder, we need to add the statement `plt.show()` to display the graph.  In Jupyter, this happens automatically when the cell ends.
--->
-
-
 Here are some examples. To plot GDP on its own, we use the code
 
 ```python
@@ -364,20 +359,11 @@ plt.bar(us.index, us['gdp'],
 
 Describe what each of these arguments/parameters does.
 
-<!--
-**Exercise.** Add a `plt.ylim()` statement that starts the `y` axis at zero.  *Hint:*  Use `plt.ylim?` to get the documentation.  *Bonus points:*  Change the color of the line to magenta and the linewidth to 2.  *Hint:*  Use `plt.plot?` to get the documentation.
-
-
-**Exercise.** Create a line plot for the Fama-French dataframe `ff` that includes both returns.  *Bonus points:* Add a title.
--->
-
-
 ## Approach #3:  Create figure objects and apply methods
 
 This approach was mysterious to us at first, but it's now our favorite.  The idea is to generate an object -- two objects, in fact -- and apply methods to them to produce the various elements of a graph:  the data, their axes, their labels, and so on.
 
 We do this -- as usual -- one step at a time.
-
 
 **Create objects.**   We'll see these two lines over and over:
 
@@ -385,16 +371,15 @@ We do this -- as usual -- one step at a time.
 import matplotlib.pyplot as plt  # import pyplot module
 fig, ax = plt.subplots()         # create fig and ax objects
 ```
+
 Note that we're using the pyplot function `subplots()`, which creates the objects `fig` and `ax` on the left.   The `subplot()` function produces a blank figure, which is displayed in the Jupyter notebook.  The names `fig` and `ax` can be anything, but these choices are standard.
 
 We say `fig` is a **figure object** and `ax` is an **axis object**.  (Try `type(fig)` and `type(ax)` to see why.)  Once more, the words don't mean what we might think they mean:
 
 * `fig` is a blank canvas for creating a figure.
-
 * `ax` is everything in it:  axes, labels, lines or bars, legend, and so on.
 
 Once we have the objects, we apply methods to them to create graphs.
-
 
 **Create graphs.**  We create graphs by applying plot-like methods to `ax`.  We typically do this with dataframe plot methods:
 
@@ -505,8 +490,7 @@ us['gdp'].plot(ax=ax[0], color='green')   # first plot
 us['pce'].plot(ax=ax[1], color='red')     # second plot
 ```
 
-(Note that we start numbering the components of `ax` at zero, which should be getting familiar by now.) This gives us a double graph, with GDP at the top and consumption at the bottom.
-
+(Note that we start numbering the components of `ax` at zero, which should be getting familiar by now.) This gives us a double graph, with GDP at the top and consumption at the bottom. Put another way, the figure `fig` contains two axis (`ax[0]` and `ax[1]`) and each axis has one plot in it.
 
 
 ## Examples
