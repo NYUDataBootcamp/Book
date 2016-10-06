@@ -6,9 +6,9 @@
 * [The data mentality](data-mentality.md)
 * [Python fundamentals 1](py-fun1.md)
 * [Python fundamentals 2](py-fun2.md)
+* [Python packages](packages.md)
 * [Pandas 1:  Data input](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
-* [Updating Python:  Conda and Pip](conda-pip.md)
 
 <!--
 * [Pandas 2:  Cleaning data](pandas-clean.md)
@@ -23,5 +23,3 @@
 * [Practice](practice.md)
 * [Glossary](glossary.md)
 -->
-
-
