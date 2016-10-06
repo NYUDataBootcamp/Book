@@ -9,7 +9,7 @@
 
 **Applications.**  US GDP, GDP per capita and life expectancy, Fama-French asset returns, PISA math scores.
 
-**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_graphics_1.ipynb).
+**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_graphics.ipynb).
 
 ---
 
@@ -90,6 +90,7 @@ Let's put some of these tools to work:
 
 You get the idea.  To get a sense of what's possible, take a look at these two notebooks [1](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_test.ipynb) [2](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).
 
+**More than you need** In addition to the buttons near the top of your notebook, there are also keyboard shortcuts for all these commands. We'll tell you about them along the way. Once we got used to them, we found that the keyboard shortcuts are an easier and more efficient way to do what we need. These will always be noted with **mtyn**. The command for creating a new cell is to press escape to be in *command mode* and then press `a` to insert a new cell above the current one and `b` to insert a new cell below the current cell.
 
 **Markdown essentials.**  Markdown is a simplified version of html ("hypertext markup language"), the language used to construct basic websites.  html was a great thing in 1995, but now that the excitement has warn off we find it painful.  Markdown, however, has a zen-like simplicity and beauty.  Here are some things we can do with it:
 
@@ -129,13 +130,13 @@ Markdown is ubiquitous.  This book, for example, is written in Markdown.  Look [
 
 **Exercise.** Create a description cell in Markdown at the top of your notebook.  It should include your name and a description of what you're doing in the notebook.  For example: "Joan Watson's notes on the Data Bootcamp Matplotlib notebook" and a date.  *Bonus points:*  Add a link.
 
-**Exercise.**  Click on the + to add two new cells.  In the first one, add the statement `import pandas as pd`, labelled as code.  Run it.  Use the second cell to find documentation for `pd.read_csv`.
+**Exercise.**  Add two new cells.  In the first one, add the statement `import pandas as pd`, labelled as code.  Run it.  Use the second cell to find documentation for `pd.read_csv`.
 
 ## Getting ready
 
 We need to do a few things before we're ready to produce graphs.
 
-**Open the graphics notebook.** If you followed instructions -- and we're confident you did -- you saved the notebook for this chapter in your `Data_Bootcamp` directory.  Return to the Jupyter tab in your browser that points to that directory.  Look for the file named `bootcamp_graphics_1.ipynb`.  Click to open it.  That will open the notebook in a new tab. The notebook will say at the top:  "Python graphics: Matplotlib fundamentals" in large bold letters.
+**Open the graphics notebook.** If you followed instructions -- and we're confident you did -- you saved the notebook for this chapter in your `Data_Bootcamp` directory.  Return to the Jupyter tab in your browser that points to that directory.  Look for the file named `bootcamp_graphics.ipynb`.  Click to open it.  That will open the notebook in a new tab. The notebook will say at the top:  "Python graphics: Matplotlib fundamentals" in large bold letters.
 
 
 **Import packages.** We need to tell our program what packages we plan to use.  The following code also checks their versions and prints the date:
