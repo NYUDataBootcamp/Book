@@ -34,7 +34,7 @@ Here are some other packages you might run across:
 
 * **[Seaborn](http://stanford.edu/~mwaskom/software/seaborn/).** A "wrapper" (isn't that a great term?) for Matplotlib that makes it easier to use.
 
-* **[Statsmodels](https://pypi.python.org/pypi/statsmodels).**  The basic statistics package.
+* **[Statsmodels](https://pypi.python.org/pypi/statsmodels).**  The basic statistics package -- This allows us to do things like regression.
 
 * **[Scikit-learn](http://scikit-learn.org/stable/).** A package for "[machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)," which is the name computer scientists give to data work.  CS people have done some cool things with data.  They're also really good at naming things:  machine learning, visualization, support vector machines, random forests.
 
@@ -73,7 +73,7 @@ Some fine points:
 
 * Redundancy.  What happens if we issue an import statement twice?  Answer:  Nothing, no harm done.
 
-* Jokes.  These are programmer jokes, which might be a contradiction in terms, but try them and see what happens:
+* Jokes.  These are programmer jokes, which some might see as a contradiction, but try them and see what happens:
 
   ```python
   import this
@@ -109,7 +109,7 @@ As usual, the idea is to get things started.  We provide links to more extensive
 
 These tools run on the **command line**, the old-school approach to computing that predates the graphical interfaces we use today (Mac OS, Windows, etc).  Picture the computer screens in "[War Games](http://pc-museum.com/046-imsai8080/wargames.htm)."  Many of the graphical interfaces used in the computing world run things on the command line behind the scenes, so it's often better to go straight to the source and run things on the command line ourselves.
 
-We have been doing this to open spyder, so we should be in good shape at this point.
+We have been doing this to open spyder, so we should have an idea of how to do this.
 
 ### Conda
 
@@ -171,7 +171,7 @@ conda install seaborn
 
 ### Pip
 
-Pip is the traditional Python package management tool.  While Conda accesses packages included in Anaconda, Pip accesses a larger number of packages stored in the **Python Package Index**, commonly referred to as PyPI or the Cheese Shop.
+Pip is the traditional Python package management tool.  While Conda accesses packages included in Anaconda, Pip accesses a larger number of packages stored in the **Python Package Index**, commonly referred to as PyPI or the [Cheese Shop](https://en.wikipedia.org/wiki/Cheese_Shop_sketch).
 
 Pip works pretty much the same way Conda works.  We type things like this at the command line prompt:
 
@@ -181,7 +181,7 @@ pip list
 pip install [package]
 ```
 
-(Look familiar?)  We won't speak more about it, but if you use a package that's not in Anaconda, this is the fallback.
+(This should remind you of what we just did with `conda`?)  We won't speak more about it, but if you use a package that's not in Anaconda, this is the fallback.
 
 **Exercise.** Use pip to install the `plotly` package. It is another package for creating plots in Python and we will use it later in the course.
 
