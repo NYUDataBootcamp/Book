@@ -9,7 +9,7 @@
 
 **Applications.**  TODO
 
-**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_plotly.ipynb).
+**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/notebooks/bootcamp_plotly.ipynb).
 
 ---
 
