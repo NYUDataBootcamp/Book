@@ -1,15 +1,15 @@
 # Python graphics: Matplotlib fundamentals
 
 ---
-**Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  We produce line plots, bar charts, scatterplots, and more.  We do all this in Jupyter using an IPython notebook.
+**Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  We produce line plots, bar charts, scatterplots, and more.  We do all this in Jupyter using a Jupyter notebook.
 
-**Python tools.**  IPython notebooks in Jupyter.  Graphing with Matplotlib: dataframe plot methods, the `plot(x,y)` function, figure and axis objects.
+**Python tools.**  Jupyter notebooks.  Graphing with Matplotlib: dataframe plot methods, the `plot(x,y)` function, figure and axis objects.
 
-**Buzzwords.** Data visualization.
+**Buzzwords.** Data visualization, Jupyter notebook
 
 **Applications.**  US GDP, GDP per capita and life expectancy, Fama-French asset returns, PISA math scores.
 
-**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_graphics_1.ipynb).
+**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_graphics.ipynb).
 
 ---
 
@@ -20,7 +20,7 @@ That's the good news.  The bad news is that graphics are inherently complicated.
 
 Our goal here is to produce graphs  with **Matplotlib**, Python's leading graphics package. There's a lot here, but don't panic, that's the nature of graphics.  And it gets easier with experience.
 
-One more thing before we start:  **Save the IPython notebook** at the Code link above in your `Data_Bootcamp` directory/folder.  The link goes to a display of the notebook; you need to click on the Raw button to get the real file.  Be sure to download it as filetype ipynb.
+One more thing before we start:  **Save the Jupyter notebook** at the Code link above in your `Data_Bootcamp` directory/folder.  The link goes to a display of the notebook; you need to click on the Raw button to get the real file.  Be sure to download it as filetype ipynb.
 
 
 ## Reminders
@@ -41,26 +41,21 @@ One more thing before we start:  **Save the IPython notebook** at the Code link 
 
 * Reading spreadsheets.  We "read" spreadsheet data into Python with the `read_csv()` and `read_excel()` functions in Pandas.
 
-* Jupyter.  A Python environment in which we create IPython notebooks.  These notebooks combine Python code with text and output, including graphics. It's the ideal medium for this topic.
+* Jupyter.  A Python environment in which we create notebooks.  These notebooks combine Python code with text and output, including graphics. It's the ideal medium for this topic.
 
 
-## IPython notebooks in Jupyter
+## Jupyter notebooks
 
-We're going to change programming environments from Spyder to **Jupyter** and work with **IPython notebooks**. We had a brief introduction with Jupyter when we installed Anaconda, but we'll go through it again to make sure we're all on the same page.
+We're going to change programming environments from Spyder to **Jupyter** and work with **Jupyter notebooks**. We had a brief introduction with Jupyter when we installed Anaconda, but we'll go through it again to make sure we're all on the same page.
 
-<!--
-  **Creating an IPython notebook.**
--->
+We can open a new Jupyter notebook by tracing the steps we took in the first class:
 
-We can open a new IPython notebook by tracing the steps we took in the first class:
-
-* Start the Anaconda Launcher.
-* Click on ipython-notebook to launch Jupyter.  This will open a tab in your browser with the word Jupyter at the top and your computer's directory structure below it.
+* Open your terminal (command prompt on Windows)
+* Type `jupyter notebook` and press enter.  This will open a tab in your browser with the word Jupyter at the top and your computer's directory structure below it.
 * In the browser tab, navigate to your `Data_Bootcamp` directory/folder.
-* Click on the New button in the upper right and choose Python 3.
+* Click on the New button in the upper right and choose `Python 3` (it may also refer to this as `Python[Root]`.
 
-We now have an empty IPython notebook we play with.
-
+We now have an empty Jupyter notebook we play with.
 
 **Jupyter essentials.**  In your browser, you should have an empty notebook with the word Jupyter at the top.  Below it is a **menubar** with the words File, Edit, View, Cell, Kernel, and Help.  Below that is a **toolbar** with various buttons.  You can see all of these components here:
 
@@ -88,13 +83,14 @@ Let's put some of these tools to work:
 
   ```
   Your name
-  Data Bootcamp sandbox for playing around with IPython notebooks
+  Data Bootcamp sandbox for playing around with Jupyter notebooks
   ```
 
   Run this cell as well.
 
-You get the idea.  To get a sense of what's possible, take a look at these [two](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_test.ipynb) [notebooks](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).
+You get the idea.  To get a sense of what's possible, take a look at these two notebooks [1](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_test.ipynb) [2](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).
 
+**More than you need** In addition to the buttons near the top of your notebook, there are also keyboard shortcuts for all these commands. We'll tell you about them along the way. Once we got used to them, we found that the keyboard shortcuts are an easier and more efficient way to do what we need. These will always be noted with **mtyn**. The command for creating a new cell is to press escape to be in *command mode* and then press `a` to insert a new cell above the current one and `b` to insert a new cell below the current cell.
 
 **Markdown essentials.**  Markdown is a simplified version of html ("hypertext markup language"), the language used to construct basic websites.  html was a great thing in 1995, but now that the excitement has warn off we find it painful.  Markdown, however, has a zen-like simplicity and beauty.  Here are some things we can do with it:
 
@@ -130,20 +126,17 @@ We can find more information about Markdown under Help.  Or use your Google fu. 
 
 Markdown is ubiquitous.  This book, for example, is written in Markdown.  Look [here](https://github.com/NYUDataBootcamp/Book) for a list of chapter files.  Click on one to see how it displays.  Click on the Raw button at the top to see the Markdown file that produced it.
 
-**IPython help.** We can access documentation just as we did in Spyder's IPython console:  Type a function or method and add a question mark.  For example:  `print?` or `df.plot?`.
+**Jupyter help.** We can access documentation just as we did in Spyder's IPython console:  Type a function or method, add a question mark, and run the cell (`shift enter`).  For example:  `print?` or `df.plot?`.
 
 **Exercise.** Create a description cell in Markdown at the top of your notebook.  It should include your name and a description of what you're doing in the notebook.  For example: "Joan Watson's notes on the Data Bootcamp Matplotlib notebook" and a date.  *Bonus points:*  Add a link.
 
-**Exercise.**  Click on the + to add two new cells.  In the first one, add the statement `import pandas as pd`, labelled as code.  Run it.  Use the second cell to find documentation for `pd.read_csv`.
-
-
+**Exercise.**  Add two new cells.  In the first one, add the statement `import pandas as pd`, labelled as code.  Run it.  Use the second cell to find documentation for `pd.read_csv`.
 
 ## Getting ready
 
 We need to do a few things before we're ready to produce graphs.
 
-
-**Open the graphics notebook.** If you followed instructions -- and we're confident you did -- you saved the notebook for this chapter in your `Data_Bootcamp` directory.  Return to the Jupyter tab in your browser that points to that directory.  Look for the file named `bootcamp_graphics_1.ipynb`.  Click to open it.  That will open the notebook in a new tab. The notebook will say at the top:  "Python graphics: Matplotlib fundamentals" in large bold letters.
+**Open the graphics notebook.** If you followed instructions -- and we're confident you did -- you saved the notebook for this chapter in your `Data_Bootcamp` directory.  Return to the Jupyter tab in your browser that points to that directory.  Look for the file named `bootcamp_graphics.ipynb`.  Click to open it.  That will open the notebook in a new tab. The notebook will say at the top:  "Python graphics: Matplotlib fundamentals" in large bold letters.
 
 
 **Import packages.** We need to tell our program what packages we plan to use.  The following code also checks their versions and prints the date:
@@ -176,11 +169,12 @@ pce  = [8867.6, 9208.2, 9531.8, 9821.7, 10041.6, 10007.2, 9847.0, 10036.3,
         10263.5, 10449.7, 10699.7]
 year = list(range(2003,2014))        # use range for years 2003-2013
 
+# Note that we set the index
 us = pd.DataFrame({'gdp': gdp, 'pce': pce}, index=year)
 print(us)
 ```
 
-Note that we created a dataframe from a dictionary.  That's convenient here, but in most real applications we'll read in spreadsheets or access the data online through an "API" (more on this later).
+Note that we created a dataframe from a dictionary.  That's convenient here, but in most real applications we'll read in spreadsheets or access the data online through an "API".
 
 
 *World Bank.* Our second dataframe contains 2013 data for GDP per capita (basically income per person) for several countries:
@@ -195,7 +189,7 @@ wbdf = pd.DataFrame({'gdppc': gdppc, 'country': country}, index=code)
 wbdf
 ```
 
-In IPython, the last line -- the dataframe name `wbdf` on its own -- results in the display of `wbdf`.  That works as long as it's the last statement in the cell.
+In a notebook, the last line -- the dataframe name `wbdf` on its own -- results in the display of `wbdf`.  That works as long as it's the last statement in the cell.
 
 
 *Fama-French returns.* Our third dataframe consist of annual returns from our friends Fama and French:
@@ -247,15 +241,15 @@ If we compare this to Excel, we will see that a number of things are preset for 
 
 * Data.  By default (meaning, if we don't do anything to change it) the data consists of the whole dataframe.
 * Chart type.  We'll see below that we have options for lines, bars, or other things.
-* `x` and `y` variables.  By default, the `x` variable is the dataframe's index and the `y` variables are the columns of the dataframe -- all of them.
+* `x` and `y` variables.  By default, the `x` variable is the dataframe's index and the `y` variables are the columns of the dataframe -- all of them that can be plotted (e.g. columns with a numeric dtype).
 
 We can change all of these things, just as we can in Excel, but that's the starting point.
 
-
-**Example (line plot).**  Enter the statement `us.plot()` into an IPython cell and run it.  This plots every column of the dataframe `us` as a line against the index, the year of the observation.  The lines have different colors.  We didn't ask for this, it's built in.  A legend associates each variable name with a line color.  This is also built in.
+**Example (line plot).**  Enter the statement `us.plot()` into a code cell and run it.  This plots every column of the dataframe `us` as a line against the index, the year of the observation.  The lines have different colors.  We didn't ask for this, it's built in.  A legend associates each variable name with a line color.  This is also built in.
 
 **Example (single line plot).**  We just plotted all the variables -- all two of them -- in the dataframe `us`.  To plot one line, we apply the same method to a single variable -- a series.  The statement `us['gdp'].plot()` plots GDP alone.  The first part -- `us['gdp']` -- is the single variable GDP.  The second part -- `.plot()` -- plots it.
 
+**Example (single line plot 2)**. In addition to getting a series from our dataframe and then plotting the series, we could also set the `y` argument when we call the plot method. The statement `us.plot(y="gdp")` will produce the same plot as `us['gdp'].plot()`.
 
 **Example (bar chart).**  The statement `us.plot(kind='bar')` produces a bar chart of the same data.
 
@@ -327,12 +321,6 @@ plt.plot(x, y)
 
 The `plt.` prefix identifies `plot()` as a pyplot function.   This produces the same kinds of figures we saw earlier, but we get there by a different route.
 
-
-<!--
-**Digression.** We're doing this in an IPython notebook, where it will work fine.  But if we use the same code in Spyder, we need to add the statement `plt.show()` to display the graph.  In IPython/Jupyter, this happens automatically when the cell ends.
--->
-
-
 Here are some examples. To plot GDP on its own, we use the code
 
 ```python
@@ -371,20 +359,11 @@ plt.bar(us.index, us['gdp'],
 
 Describe what each of these arguments/parameters does.
 
-<!--
-**Exercise.** Add a `plt.ylim()` statement that starts the `y` axis at zero.  *Hint:*  Use `plt.ylim?` to get the documentation.  *Bonus points:*  Change the color of the line to magenta and the linewidth to 2.  *Hint:*  Use `plt.plot?` to get the documentation.
-
-
-**Exercise.** Create a line plot for the Fama-French dataframe `ff` that includes both returns.  *Bonus points:* Add a title.
--->
-
-
 ## Approach #3:  Create figure objects and apply methods
 
 This approach was mysterious to us at first, but it's now our favorite.  The idea is to generate an object -- two objects, in fact -- and apply methods to them to produce the various elements of a graph:  the data, their axes, their labels, and so on.
 
 We do this -- as usual -- one step at a time.
-
 
 **Create objects.**   We'll see these two lines over and over:
 
@@ -392,16 +371,15 @@ We do this -- as usual -- one step at a time.
 import matplotlib.pyplot as plt  # import pyplot module
 fig, ax = plt.subplots()         # create fig and ax objects
 ```
-Note that we're using the pyplot function `subplots()`, which creates the objects `fig` and `ax` on the left.   The `subplot()` function produces a blank figure, which is displayed in the IPython notebook.  The names `fig` and `ax` can be anything, but these choices are standard.
+
+Note that we're using the pyplot function `subplots()`, which creates the objects `fig` and `ax` on the left.   The `subplot()` function produces a blank figure, which is displayed in the Jupyter notebook.  The names `fig` and `ax` can be anything, but these choices are standard.
 
 We say `fig` is a **figure object** and `ax` is an **axis object**.  (Try `type(fig)` and `type(ax)` to see why.)  Once more, the words don't mean what we might think they mean:
 
 * `fig` is a blank canvas for creating a figure.
-
 * `ax` is everything in it:  axes, labels, lines or bars, legend, and so on.
 
 Once we have the objects, we apply methods to them to create graphs.
-
 
 **Create graphs.**  We create graphs by applying plot-like methods to `ax`.  We typically do this with dataframe plot methods:
 
@@ -410,7 +388,7 @@ fig, axe = plt.subplots()        # create axis object axe
 us.plot(ax=axe)                  # ax= looks for axis object, axe is it
 ```
 
-(Note again that we need to create and use the axis object in the same IPython cell.)
+(Note again that we need to create and use the axis object in the same code cell.)
 
 
 **Example.**  Let's do the same with the Fama-French data:
@@ -512,8 +490,7 @@ us['gdp'].plot(ax=ax[0], color='green')   # first plot
 us['pce'].plot(ax=ax[1], color='red')     # second plot
 ```
 
-(Note that we start numbering the components of `ax` at zero, which should be getting familiar by now.) This gives us a double graph, with GDP at the top and consumption at the bottom.
-
+(Note that we start numbering the components of `ax` at zero, which should be getting familiar by now.) This gives us a double graph, with GDP at the top and consumption at the bottom. Put another way, the figure `fig` contains two axis (`ax[0]` and `ax[1]`) and each axis has one plot in it.
 
 
 ## Examples
@@ -707,7 +684,7 @@ Note the wiggly lines, perfect for suggesting a hand-drawn graph.
 **Exercise.** Try one of these styles:  `ggplot`, `bmh`, `dark_background`, and `grayscale`.  Which ones do you like?  Why?
 
 
-When we're done, we reset the style with these two lines in an IPython cell:
+When we're done, we reset the style with these two lines in an code cell:
 
 ```python
 mpl.rcParams.update(mpl.rcParamsDefault)
