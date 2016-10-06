@@ -9,7 +9,7 @@
 
 **Applications.**  US GDP, GDP per capita and life expectancy, Fama-French asset returns, PISA math scores.
 
-**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_graphics.ipynb).
+**Code.** [Link](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/notebooks/bootcamp_graphics.ipynb).
 
 ---
 
@@ -88,7 +88,7 @@ Let's put some of these tools to work:
 
   Run this cell as well.
 
-You get the idea.  To get a sense of what's possible, take a look at these two notebooks [1](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_test.ipynb) [2](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).
+You get the idea.  To get a sense of what's possible, take a look at these two notebooks [1](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/notebooks/bootcamp_test.ipynb) [2](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).
 
 **More than you need** In addition to the buttons near the top of your notebook, there are also keyboard shortcuts for all these commands. We'll tell you about them along the way. Once we got used to them, we found that the keyboard shortcuts are an easier and more efficient way to do what we need. These will always be noted with **mtyn**. The command for creating a new cell is to press escape to be in *command mode* and then press `a` to insert a new cell above the current one and `b` to insert a new cell below the current cell.
 

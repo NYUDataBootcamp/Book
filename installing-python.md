@@ -7,7 +7,7 @@
 
 **Buzzwords.**  Package, distribution, environment, mtwn.
 
-**Code.** [Python](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/Python/bootcamp_test.py) | [IPython notebook](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/IPython/bootcamp_test.ipynb).
+**Code.** [Python](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/Python/bootcamp_test.py) | [IPython notebook](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/notebooks/bootcamp_test.ipynb).
 
 ---
 
@@ -85,7 +85,7 @@ You see here that Spyder has a number of different components.  It's overwhelmin
 We can move these windows around by dragging and dropping.  If we mess up -- it happens to the best of us -- look for "View" at the top and click on "Reset window layout."
 
 
-**Jupyter.**  Jupyter is another graphical environment, which we use to create and run **Jupyter notebooks**. These notebooks combine code, output, words, and graphics.  It's a convenient format for presenting our work to others and can be used as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_examples.ipynb) [examples](http://nbviewer.jupyter.org/url/norvig.com/ipython/How%20to%20Do%20Things%20with%20Words.ipynb).
+**Jupyter.**  Jupyter is another graphical environment, which we use to create and run **Jupyter notebooks**. These notebooks combine code, output, words, and graphics.  It's a convenient format for presenting our work to others and can be used as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/notebooks/bootcamp_examples.ipynb) [examples](http://nbviewer.jupyter.org/url/norvig.com/ipython/How%20to%20Do%20Things%20with%20Words.ipynb).
 
 To create or run a Jupyter notebook from the terminal, simply type `jupyter notebook` into the terminal and hit enter.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see something like this:
 

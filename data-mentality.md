@@ -5,7 +5,7 @@
 
 **Buzzwords.** Questions, data, idea machines.
 
-**Code.** Related [examples](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/IPython/bootcamp_examples.ipynb)
+**Code.** Related [examples](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/notebooks/bootcamp_examples.ipynb)
 
 ---
 
