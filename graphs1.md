@@ -53,7 +53,7 @@ We can open a new Jupyter notebook by tracing the steps we took in the first cla
 * Open your terminal (command prompt on Windows)
 * Type `jupyter notebook` and press enter.  This will open a tab in your browser with the word Jupyter at the top and your computer's directory structure below it.
 * In the browser tab, navigate to your `Data_Bootcamp` directory/folder.
-* Click on the New button in the upper right and choose Python 3.
+* Click on the New button in the upper right and choose `Python 3` (it may also refer to this as `Python[Root]`.
 
 We now have an empty Jupyter notebook we play with.
 
