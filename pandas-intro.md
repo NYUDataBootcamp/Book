@@ -1,11 +1,11 @@
 # Pandas 1:  Data input
 
 ---
-**Overview.**  We introduce "packages" -- collections of tools that extend Python's capabilities -- and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "DataFrame" this produces.
+**Overview.**  We introduce the Python package `pandas`. `pandas` is the Python package devoted to data management. In this chapter, we cover how the basic type known as a `DataFrame` and then read some example spreadsheets into Python.
 
-**Python tools.**  Import, Pandas, reading spreadsheet files, DataFrames, series, columns, index.
+**Python tools.**  Pandas, reading spreadsheet files, DataFrames, series, columns, index.
 
-**Buzzwords.**  Package, csv file, API.
+**Buzzwords.**  DataFrame, csv file, API.
 
 **Applications.**  Income and output of countries, government debt, income by college major, old people, equity returns, George Clooney's movie roles.
 
@@ -13,11 +13,15 @@
 
 ---
 
-We're ready now to look at some data.  Lots of data.  You will need an **internet connection** for much of it.
+We're finally ready now to look at some data.  Lots of data.  You will need an **internet connection** for many of our examples.
 
-You may recall that our typical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first -- data input -- but touch briefly on the second and third.  More concretely, we explain how to get spreadsheet data into Python.  We'll review how  Python uses collections of tools or plug-ins called **packages** to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.
+In this lecture, we have two goals:
+1. Introduce you to the basic types we will use for data analysis throughout the rest of this course: `DataFrames` and `Series`.
+2. Teach you some of the functions that we will use to read data (both from your own computer and from the internet).
 
-The Pandas package is (even) more **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** than core Python in the sense of putting a lot of the programming details out the way.  That makes it both easier to use -- lots of things are automated -- but in some cases also a bit more mysterious.  All together, though, it's an incredibly powerful collection of data tools.
+Recall that our typical program will consist of data input, data management, and graphics creation. The package being introduced in this lecture, `pandas`, will allow us to do all of these things -- Though eventually as we make more complicated graphics, we will need to use other packages such as: `matplotlib`, `seaborn`, `plotly`, etc...
+
+It is worth noting that the `pandas` package could be considered more **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** than core Python in the sense of putting a lot of the programming details out the way. That makes it both easier to use -- lots of things are automated -- but in some cases also a bit more mysterious. All together, though, it's an incredibly powerful collection of data tools which will make your life throughout this class much easier.
 
 ## Reminders
 
@@ -32,6 +36,59 @@ The Pandas package is (even) more **[high-level](https://en.wikipedia.org/wiki/H
 * Function returns.  We refer to the output of a function as its **return**.  We would say, for example, that the function `type(x)` `return`s the type of the input object `x`.  We capture the return with an assignment:  `xtype = type(x)`.
 
 * Packages. Packages are collections of tools -- functions and types/methods -- that extend Python's capabilities. We import a package using an `import` (e.g. `import pandas`) statement or some combination of `import`, `from`, and `as` (e.g. `import pandas as pd` or `from pandas import DataFrame`).
+
+## First Look at DataFrames
+
+The entire `pandas` package is oriented around the idea of a `DataFrame`, so it is natural to begin our description of the package there. A `DataFrame` is similar to a sheet of data in excel (or to an `R` `dataframe` if you have programmed in `R` before). Let's create one so that we can see what it looks like (don't forget to run `import pandas as pd` -- all of our examples will be based on you having previously done this). Let's create our first `DataFrame` by using data from a dictionary.
+
+```python
+# This dictionary is similar to one that we saw earlier in the class
+# It represents GDP data over multiple years
+df = pd.DataFrame({"GDP": [1.0, 1.25, 1.50],
+                   "Year": [1990, 2000, 2010]})
+print(df)
+```
+
+What do you see on your screen? The print command on our `DataFrame` should display something that looks like a table.
+
+* At the top of each of the columns of the dataframe, you should see "GDP" and "Year" (which were the keys to our dictionary). These are known as the _columns_.
+* To the left of the columns, we see a 0, 1, and 2. These numbers are elements of the _index_
+* Finally, inside the _index_ and _columns_, you should see some data (which corresponds to the values of our dictionary). These are known as the _values_.
+
+Typically, each column stands for a variable in our dataset and each element of the index stands for a separate observation. We can get each of these pieces of information, by asking the `DataFrame` to tell us its properties
+
+```python
+print("My columns are:\n", df.columns)
+print("My index is:\n", df.index)
+print("My values are:\n", df.values)
+```
+
+We can verify that `df` is indeed a `DataFrame` by asking Python to tell us the type of `df`.
+
+```python
+print(type(df))
+```
+
+We can also explore the shape (and size) of our data using the `shape` and `size` properties.
+
+```python
+print("DataFrame has this many rows and columns", df.shape)
+print("DataFrame has this many total data points", df.size)
+```
+
+**Exercise**: What do you think `df.dtypes` is doing?
+
+**Exercise**: What do you think `df.T` is doing?
+
+**Exercise**: Insert Dave's exercise...
+
+## Operating on DataFrames
+
+## DataFrame Methods
+
+## Data Input
+
+Reading files from internet and from computer
 
 ## Data input 1:  reading internet files
 
