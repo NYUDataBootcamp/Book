@@ -8,6 +8,7 @@
 * [Python fundamentals 2](py-fun2.md)
 * [Python packages](packages.md)
 * [Pandas 1: Introduction to Pandas](pandas-intro.md)
+* [Pandas 2: Data Input](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
 
 <!--
