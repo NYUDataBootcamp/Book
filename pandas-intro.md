@@ -3,7 +3,7 @@
 ---
 **Overview.**  We introduce the Python package `pandas`. `pandas` is the Python package devoted to data management. In this chapter, we cover how to create a `DataFrame` and discuss some of its properties and methods.
 
-**Python tools.**  Pandas, DataFrame, Series, Tab Completion
+**Python tools.**  Pandas, DataFrame, Series
 
 **Buzzwords.**  DataFrame, Series
 
@@ -13,15 +13,9 @@
 
 ---
 
-We're finally ready now to look at some data.  Lots of data.  You will need an **internet connection** for many of our examples.
+The goal of this lecture is to introduce you to some of the basic concepts needed to understand how to do data analysis in Python. In particular, we introduce you to the `pandas` package and discuss its two core types `DataFrame`s and `Series`.
 
-In this lecture, we have two goals:
-1. Introduce you to the basic types we will use for data analysis throughout the rest of this course: `DataFrames` and `Series`.
-2. Teach you some of the functions that we will use to read data (both from your own computer and from the internet).
-
-Recall that our typical program will consist of data input, data management, and graphics creation. The package being introduced in this lecture, `pandas`, will allow us to do all of these things -- Though eventually as we make more complicated graphics, we will need to use other packages such as: `matplotlib`, `seaborn`, `plotly`, etc...
-
-It is worth noting that the `pandas` package could be considered more **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** than core Python in the sense of putting a lot of the programming details out the way. That makes it both easier to use -- lots of things are automated -- but in some cases also a bit more mysterious. All together, though, it's an incredibly powerful collection of data tools which will make your life throughout this class much easier.
+It is worth noting that the `pandas` package could be considered more **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** than core Python in the sense of taking a lot of the programming details out of the way. That makes it easier to use -- lots of things are automated -- but in some cases also a bit more mysterious. All together, though, it's an incredibly powerful collection of data tools which will make your life throughout this class much easier.
 
 ## Reminders
 
@@ -39,11 +33,11 @@ It is worth noting that the `pandas` package could be considered more **[high-le
 
 ## First Look at DataFrames
 
-The entire `pandas` package is oriented around the idea of a `DataFrame`, so it is natural to begin our description of the package there. A `DataFrame` is similar to a sheet of data in excel (or to an `R` `dataframe` if you have programmed in `R` before). Let's create one so that we can see what it looks like (don't forget to run `import pandas as pd` -- all of our examples will be based on you having previously done this). Let's create our first `DataFrame` by using data from a dictionary.
+The entire `pandas` package is oriented around the idea of a `DataFrame`, so it is natural to begin our description of the package there. A `DataFrame` is similar to a sheet of data in excel (or to an `R` `dataframe` if you have programmed in `R` before). Let's create one so that we can see what it looks like (don't forget to run `import pandas as pd` first -- all of our examples will be based on you having previously done this). Let's create our first `DataFrame` by using data from a dictionary.
 
 ```python
 # This dictionary is similar to one that we saw earlier in the class
-# It represents GDP data at 10 year intervals from 1990 to 2010
+# It represents GDP/CPI data at 10 year intervals from 1990 to 2010
 df = pd.DataFrame({"GDP": [5974.7, 10031.0, 14681.1],
                    "CPI": [127.5, 169.3, 217.488],
                    "Year": [1990, 2000, 2010],
@@ -75,7 +69,9 @@ The text prior to `DataFrame` just tells us some things about where this type li
 
 Typically columns are variables and the column labels give us their names.  In our example, the second column has the name `Year` and its values follow below it.  The rows are then observations, and the row labels give us their names.  This is a standard setup and we'll do our best to conform to it.  If the data come in some other form, we'll try to convert it.
 
-**Dimensions.** We access a DataFrame's dimensions -- the numbers of rows and columns -- with the `shape` method:  `df.shape`.  Here the answer is `(3, 4)`, so we have 3 rows (observations) and 2 columns (variables).
+We can get all of the relevant information from our `DataFrame` by using these properties:
+
+**Dimensions.** We access a DataFrame's dimensions -- the numbers of rows and columns -- with the `shape` method:  `df.shape`.  Here the answer is `(3, 4)`, so we have 3 rows (observations) and 4 columns (variables).
 
 **Columns and indexes.**  We access the column and row labels directly.  For the DataFrame `df` we read in earlier, we extract column labels with the `columns` method:  `df.columns`.  That gives us the verbose output `Index(['CPI', 'Country', 'GDP', 'Year'], dtype='object')`.  If we prefer to have them as a list, we can use a `tolist` method `df.columns.tolist()`.  That gives us the column names as a list:  `['CPI', 'Country', 'GDP', 'Year']`.
 
@@ -147,7 +143,7 @@ df['RGDP'] = df['GDP']/df['CPI']
 df['GDP_div_1000'] = df['GDP'] / 1000
 ```
 
-The first line computes the new variable `y1` as the ratio of `x1` to `x2`.  The second computes `y2` as the sum of `x2` and `x3`.
+The first line computes the new variable `RGDP` as the ratio of `GDP` to `CPI` (here it does division element by element).  The second computes `GDP_div_1000` as `GDP` divided by `1000` (here it divides everything by 1000).
 
 These statements do two things:  they perform the calculation on the right, and they assign it to the variable on the left.  The second step adds the new variables to the DataFrame.  The statement `print('\n', df)` now gives us
 
@@ -160,7 +156,7 @@ These statements do two things:  they perform the calculation on the right, and 
 
 If we step back for a minute, we might compare this to Excel. If `GDP` and `CPI` are columns, then we might start a new column labeled `RGDP`. We would then compute the value of `RGDP` for the first observation and copy the formula to all of the other observations in that column. Here one line of code computes them all.
 
-**Digression.** There are two syntax issues we should mention.  One is that others -- not us! -- commonly refer to a variable `df[`GDP`]` by `df.GDP`.  That usually works, but not always.  For example, it doesn't work if the variable name contains spaces or conflicts with an existing method.  And we can't assign to it, as we did when we defined `y1` above.  The second issue is integer variable names.  We avoid these, too, but if we somehow end up with a variable with an integer label -- `2011`, for example -- we would refer to it by that label: `df[2011]` without quotes.  If you're not sure what type the variable labels are, print `df.columns` and see whether they have quotes.
+**Digression.** There are two syntax issues we should mention.  One is that others -- not us! -- commonly refer to a variable `df[`GDP`]` by `df.GDP`.  That usually works, but not always.  For example, it doesn't work if the variable name contains spaces or conflicts with an existing method.  And we can't assign to it, as we did when we defined `RGDP` above.  The second issue is integer variable names.  We avoid these, too, but if we somehow end up with a variable with an integer label -- `2011`, for example -- we would refer to it by that label: `df[2011]` without quotes.  If you're not sure what type the variable labels are, print `df.columns` and see whether they have quotes.
 
 **Rename variables.**  If we want to change *all the names*, we can assign a list of new names to the DataFrame's column labels. WARNING -- You should be very careful when you do this because unless you're sure of what you're doing then you might rename a variable incorrectly!
 
