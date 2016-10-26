@@ -58,6 +58,10 @@ We can verify that this type is indeed a DataFrame (and that we haven't been lyi
 
 ```python
 type(df)
+
+returns
+
+```
 pandas.core.frame.DataFrame
 ```
 
