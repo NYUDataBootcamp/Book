@@ -13,7 +13,7 @@
 
 ---
 
-We're finally ready now to look at some data.  Lots of data.  You will need an **internet connection** for many of our examples.
+We're finally ready now to look at some data.  Lots of data.  You will need an **internet connection** for many of our examples. Additionally, you will need to make sure that you have a new package installed -- It is called [pandas-datareader](https://pandas-datareader.readthedocs.io/en/latest/). Recall that you can do this by running `conda install pandas-datareader` in your terminal.
 
 In this lecture, our main goal is to teach you some of the functions that we will use to read data (both from your own computer and from the internet).
 

@@ -9,7 +9,7 @@
 
 **Applications.** US GDP
 
-**Code.**  [Link](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/Python/bootcamp_pandas-input.py).
+**Code.**  [Link](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/Python/bootcamp_pandas-intro.py).
 
 ---
 
