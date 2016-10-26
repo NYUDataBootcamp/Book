@@ -1,7 +1,7 @@
 # Pandas 2:  Data input
 
 ---
-**Overview.** In the last lecture, we introduced some of the main ideas in the `pandas` package. We now talk about how we can use `pandas` (and `pandas_datareader`) to read data into Python. We will learn to read data from both the internet and from our computers.
+**Overview.** In the last lecture, we introduced some of the main ideas in the pandas package. We now talk about how we can use pandas (and pandas-datareader) to read data into Python. We will learn to read data from both the internet and from our computers.
 
 **Python tools.**  Pandas, Pandas-Datareader, reading spreadsheet files, data
 
@@ -17,7 +17,7 @@ We're finally ready now to look at some data.  Lots of data.  You will need an *
 
 In this lecture, our main goal is to teach you some of the functions that we will use to read data (both from your own computer and from the internet).
 
-Recall that our typical program will consist of data input, data management, and graphics creation. The package we previously introduced, `pandas`, will allow us to do all of these things -- Though eventually as we make more complicated graphics, we will need to use other packages such as: `matplotlib`, `seaborn`, `plotly`, etc... This lecture will focus mostly on data input; we will discuss the others (data management and graphics) in detail in later lectures.
+Recall that our typical program will consist of data input, data management, and graphics creation. The package we previously introduced, pandas, will allow us to do all of these things -- Though eventually as we make more complicated graphics, we will need to use other packages such as: [matplotlib](http://matplotlib.org/), [seaborn](http://seaborn.pydata.org/), [plotly](https://plot.ly/), etc... This lecture will focus mostly on data input; we will discuss the others (data management and graphics) in detail in later lectures.
 
 ## Reminders
 
@@ -77,7 +77,7 @@ What we have is a table, much like what we'd see in a spreadsheet.  If we compar
 
 Note that the table of data has labels for both the columns and rows.  We'll do more with both of them shortly.
 
-The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a **DataFrame**. We also see a long list of optional inputs that change how we read the file.  Here are some examples we've found useful:
+The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a DataFrame. We also see a long list of optional inputs that change how we read the file.  Here are some examples we've found useful:
 
 **Example.**  Change the last line of the earlier code to
 
@@ -86,7 +86,7 @@ dfalt = pd.read_csv(url, nrows=2)
 print('\n', dfalt)
 ```
 
-The argument `nrows=2` tells the `read_csv` statement to read only the first 2 rows of the file at `url`. One of the instances in which this can be useful if you have a very large dataset and just want a small subset of data to play with while you develop your code.
+The argument `nrows=2` tells the `read_csv` statement to read only the first 2 rows of the file at `url`. One of the instances in which this can be useful if you have a very large dataset and just want a small subset of data to explore while you develop your code.
 
 **Example.**  We can identify specific values in a csv file as missing or NA (not available).  We see in the documentation that the parameter `na_values` takes a list of strings as input.  To treat the number 1 as missing we change the read statement to `read_csv(url, na_values=[1])`.  The result is
 

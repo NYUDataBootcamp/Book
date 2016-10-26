@@ -1,9 +1,9 @@
 # Pandas 1: Introduction
 
 ---
-**Overview.**  We introduce the Python package `pandas`. `pandas` is the Python package devoted to data management. In this chapter, we cover how to create a `DataFrame` and discuss some of its properties and methods.
+**Overview.**  We introduce the Python package pandas and its core type the DataFrame. pandas is the Python package devoted to data management. In this chapter, we cover how to create a DataFrame and discuss some of its properties and methods.
 
-**Python tools.**  Pandas, DataFrame, Series
+**Python tools.**  pandas, DataFrame, Series
 
 **Buzzwords.**  DataFrame, Series
 
@@ -13,9 +13,9 @@
 
 ---
 
-The goal of this lecture is to introduce you to some of the basic concepts needed to understand how to do data analysis in Python. In particular, we introduce you to the `pandas` package and discuss its two core types `DataFrame`s and `Series`.
+The goal of this lecture is to introduce you to some of the basic concepts needed to understand how to do data analysis in Python. In particular, we introduce you to the pandas package and discuss its two core types DataFrames and Series.
 
-It is worth noting that the `pandas` package could be considered more **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** than core Python in the sense of taking a lot of the programming details out of the way. That makes it easier to use -- lots of things are automated -- but in some cases also a bit more mysterious. All together, though, it's an incredibly powerful collection of data tools which will make your life throughout this class much easier.
+It is worth noting that the pandas package could be considered more **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** than core Python in the sense of taking a lot of the programming details out of our hands. That makes it easier to use -- lots of things are automated -- but in some cases also a bit more mysterious. All together, though, it's an incredibly powerful collection of data tools which will make your life throughout this class (and beyond) much easier.
 
 ## Reminders
 
@@ -33,7 +33,7 @@ It is worth noting that the `pandas` package could be considered more **[high-le
 
 ## First Look at DataFrames
 
-The entire `pandas` package is oriented around the idea of a `DataFrame`, so it is natural to begin our description of the package there. A `DataFrame` is similar to a sheet of data in excel (or to an `R` `dataframe` if you have programmed in `R` before). Let's create one so that we can see what it looks like (don't forget to run `import pandas as pd` first -- all of our examples will be based on you having previously done this). Let's create our first `DataFrame` by using data from a dictionary.
+The entire pandas package is oriented around the idea of a DataFrame, so it is natural to begin our description of the package there. A DataFrame is similar to a sheet of data in excel (or to an R `data.frame` if you have programmed in R before). Let's create one so that we can see what it looks like (don't forget to run `import pandas as pd` first -- all of our examples will be based on you having previously done this). Let's create our first DataFrame by using data from a dictionary.
 
 ```python
 # This dictionary is similar to one that we saw earlier in the class
@@ -45,7 +45,7 @@ df = pd.DataFrame({"GDP": [5974.7, 10031.0, 14681.1],
 print(df)
 ```
 
-What do you see on your screen? The print command on our `DataFrame` should have displayed something that looks like this:
+What do you see on your screen? The print command on our DataFrame should have displayed something that looks like this:
 
 ```
        CPI Country      GDP  Year
@@ -54,32 +54,32 @@ What do you see on your screen? The print command on our `DataFrame` should have
 2  217.488      US  14681.1  2010
 ```
 
-We can verify that this type is indeed a `DataFrame` (and that we haven't been lying to you about what you created) by simply asking Python to tell us its type:
+We can verify that this type is indeed a DataFrame (and that we haven't been lying to you about what you created) by simply asking Python to tell us its type:
 
 ```python
-In [2]: type(df)
-Out[2]: pandas.core.frame.DataFrame
+type(df)
+pandas.core.frame.DataFrame
 ```
 
-The text prior to `DataFrame` just tells us some things about where this type lives within `pandas` -- You can safely ignore it. Now we should talk about what makes up a `DataFrame`.
+The text prior to DataFrame just tells us some things about where this type lives within pandas -- You can safely ignore it. Now we should talk about what makes up a DataFrame.
 
-* At the top of each of the columns of the dataframe, you should see "CPI", "Country", "GDP", and "Year" (which were the keys to our dictionary). These are known as the _column labels_.
+* At the top of each of the columns of the dataframe, you should see "CPI", "Country", "GDP", and "Year" (which were the keys to our dictionary). These are known as the _column labels_ or _column names_.
 * To the left of the columns, we see a 0, 1, and 2. These numbers are elements of the _index_ (or _row labels_).
-* Finally, inside the _index_ and _column labels_, you should see some data (which corresponds to the values of our dictionary). These are known as the _values_. We refer to the data going down a column as the _column_ and the data going across a row as a _row_.
+* Finally, inside the _index_ and _column labels_, you should see some data (which corresponds to the values of our dictionary). These are known as the _values_. We refer to the data going down a column as a _column_ and the data going across a row as a _row_.
 
 Typically columns are variables and the column labels give us their names.  In our example, the second column has the name `Year` and its values follow below it.  The rows are then observations, and the row labels give us their names.  This is a standard setup and we'll do our best to conform to it.  If the data come in some other form, we'll try to convert it.
 
-We can get all of the relevant information from our `DataFrame` by using these properties:
+We can get all of the relevant information from our DataFrame by accessing the following properties:
 
-**Dimensions.** We access a DataFrame's dimensions -- the numbers of rows and columns -- with the `shape` method:  `df.shape`.  Here the answer is `(3, 4)`, so we have 3 rows (observations) and 4 columns (variables).
+**Dimensions.** We access a DataFrame's dimensions -- the numbers of rows and columns -- using `df.shape`.  Here the answer is `(3, 4)`, so we have 3 rows (observations) and 4 columns (variables).
 
 **Columns and indexes.**  We access the column and row labels directly.  For the DataFrame `df` we read in earlier, we extract column labels with the `columns` method:  `df.columns`.  That gives us the verbose output `Index(['CPI', 'Country', 'GDP', 'Year'], dtype='object')`.  If we prefer to have them as a list, we can use a `tolist` method `df.columns.tolist()`.  That gives us the column names as a list:  `['CPI', 'Country', 'GDP', 'Year']`.
 
 The row labels are referred to as the **index**.  We extract them by accessing `df.index`.  That gives us the verbose output `RangeIndex(start=0, stop=3, step=1)`.  We can convert it to a list by using the same `tolist` method, `df.index.tolist()`, which gives us `[0, 1, 2]`.  In this case, the index is not part of the original data; Pandas inserted a counter for us.  As usual in Python, the counter starts at zero.
 
-**Column data types.**  Pandas allows every column (typically a variable) to have a different data type, but the type must be the same within a column.  With our DataFrame `df`, we get the types with the `dtypes` method; that is, with `df.dtypes`:
+**Column data types.**  Pandas allows every column (typically a variable) to have a different data type, but the type must be the same within a column.  With our DataFrame `df`, we get the types by using `df.dtypes`:
 
-```python
+```
 CPI        float64
 Country     object
 GDP        float64
@@ -87,9 +87,9 @@ Year         int64
 dtype: object
 ```
 
-Evidently `Year` is an  integer and both `CPI` and `GDP` are floats.  They're no different from the types of numbers we came across in the previous chapter.  The column, `Country`, is different though. `pandas` labeled this one as having type `object`. Object is the name Pandas gives to things it can't turn into numbers -- in our case, strings.  Sometimes, as here, that makes sense: country names like `US` are naturally strings.  But in many cases we've run across, numbers are given the dtype object because there was something in the data that didn't look like a number.  We'll see more of that later on.
+Evidently `Year` is an  integer and both `CPI` and `GDP` are floats.  They're no different from the types of numbers we came across in the previous chapter.  The column, `Country`, is different though. pandas labeled this one as having type `object`. Object is the name Pandas gives to things it can't turn into numbers -- in our case, strings.  Sometimes, as here, that makes sense: country names like `US` are naturally strings.  But in many cases we've run across, numbers are given the dtype object because there was something in the data that didn't look like a number.  We'll see more of that later on.
 
-**Transpose columns and rows.** If we want to rotate the DataFrame, exchanging columns and rows, we use the `transpose` method:  `df.transpose` or (more succinctly) `df.T`.  Let's do that with the DataFrame `df` we read in earlier:
+**Transpose columns and rows.** If we want to rotate the DataFrame, exchanging columns and rows, we use the `transpose` method:  `df.transpose()` or (more succinctly) `df.T`.  Let's do that with the DataFrame `df` we read in earlier:
 
 ```python
 dft = df.T
@@ -126,17 +126,40 @@ pwt = pd.DataFrame(data)
 
 ## Operating on DataFrames
 
-So we have a DataFrame `df` whose columns are variables. One of the great things about Pandas is that we can do things with every observation of a variable in one statement.
+So we have a DataFrame `df` whose columns are variables. One of the great things about pandas is that we can do things with every observation of a variable in one statement.
 
-**Variables = series.**  In the DataFrame `df` we created earlier, if we want to refer to the variable `GDP` we write `df["GDP"]`.  If we ask what type this is, with
+**Variables = Series.**  In the DataFrame `df` we created earlier, if we wanted to refer to only one of the columns (variables), for example `GDP`, we write `df["GDP"]`.
+
+```python
+print(df["GDP"])
+```
+
+If we ask what type this is, with
 
 ```python
 print(type(df['GDP']))
 ```
 
-we find that it's a `pandas.core.series.Series` -- Similar to as with DataFrames, we refer to this as **series** for short.  A series is essentially a DataFrame with a single variable or column. Anytime we ask for a signel variable back, `pandas` will return us a `Series`, but if we ask for multiple rows (`df[["GDP", "CPI"]]`) then `pandas` will return us a `DataFrame`.
+We find that it's a `pandas.core.series.Series` -- Similar to as with DataFrames, we refer to this as **series** for short.  A series is essentially a DataFrame with a single variable or column. Anytime we ask for a single variable back, pandas will return us a Series, but if we ask for multiple rows (`df[["GDP", "CPI"]]`) then pandas will return us a DataFrame.
 
-**Construct new variables from old ones.** Now that we know how to refer to a variable, we can construct others from them.  We construct two with
+Series are useful because we can do addition, subtraction, division, and multiplication with them. Here are some examples
+
+```python
+print(df["GDP"] + df["GDP"])
+print(df["GDP"] - df["GDP"])
+print(df["GDP"] / df["CPI"])
+print(df["CPI"] * df["CPI"])
+```
+
+How do you think these operations are happening? How does Python know which two elements to add together etc?
+
+Additionally, we can do operations on a Series with integers or floats. For example
+
+```python
+print(df["GDP"] / 10000)
+```
+
+**Construct new variables from old ones.** Now that we know how to refer to a variable and about some of the operations we can do between variables, we can construct others from them. We construct two as an example
 
 ```python
 df['RGDP'] = df['GDP']/df['CPI']
@@ -145,9 +168,9 @@ df['GDP_div_1000'] = df['GDP'] / 1000
 
 The first line computes the new variable `RGDP` as the ratio of `GDP` to `CPI` (here it does division element by element).  The second computes `GDP_div_1000` as `GDP` divided by `1000` (here it divides everything by 1000).
 
-These statements do two things:  they perform the calculation on the right, and they assign it to the variable on the left.  The second step adds the new variables to the DataFrame.  The statement `print('\n', df)` now gives us
+These statements do two things: they perform the calculation on the right, and they assign it to the variable on the left.  The second step adds the new variables to the DataFrame.  The statement `print('\n', df)` now gives us
 
-```python
+```
        CPI Country      GDP  Year       RGDP  GDP_div_1000
 0  127.500      US   5974.7  1990  46.860392        5.9747
 1  169.300      US  10031.0  2000  59.249852       10.0310
@@ -176,9 +199,9 @@ The flexibility of string methods and list comprehensions opens up a lot of othe
 df = df.rename(columns={'gdp': 'ngdp'})
 ```
 
-Note the use of a dictionary that associates the old name (the "key" `gdp`) with the new name (the "value" `ngdp`).  If we want to change more than one variable name, we simply add more items to the dictionary. Additionally, it is worth noting that we needed to assign the return of the `rename` function to `df` again -- This is because most of the `pandas` functions are making copies of our dataframes. You will have to assign the output of a method to a dataframe frequently.
+Note the use of a dictionary that associates the old name (the "key" `gdp`) with the new name (the "value" `ngdp`).  If we want to change more than one variable name, we simply add more items to the dictionary. Additionally, it is worth noting that we needed to assign the return of the `rename` function to `df` again -- This is because most of the pandas functions are making copies of our dataframes. You will have to assign the output of a method to a dataframe frequently.
 
-**Extract variables.**  We just saw that commands like `df['ngdp']` "extract" the variable/series `ngdp` from the DataFrame `df`. In other cases, we may want to extract a set of variables and create a smaller DataFrame.  This happens a lot when our data has way more variables than we need.
+**Extract variables.**  We just saw that commands like `df['ngdp']` "extract" the variable/series `ngdp` from the DataFrame `df`. In other cases, we may want to extract a set of variables and create a smaller DataFrame.  This happens a lot when our data has more variables than we need.
 
 We can extract variables by name or number.  If by name, we simply put the variable names in a list. If by number, we count (as usual) starting with zero. This code gives us two ways to extract `ngdp` and `rgdp` from `df`:
 
@@ -189,7 +212,7 @@ df_v1 = df[namelist]
 df_v2 = df[numlist]
 ```
 
-You might verify that the two new DataFrames are identical -- With a small dataframe like this, you can do this by hand by just printing them both out.
+You might verify that the two new DataFrames are identical -- with a small dataframe like this, you can do this by hand by just printing them both out.
 
 Closely related is the `drop` method.  If we want to drop the variable `cpi`, we would use
 
@@ -262,7 +285,7 @@ df_reset = df.reset_index()
 
 Try it and see.  We'll spend more time on these methods in a couple weeks.
 
-**Statistics.**  We can compute the mean, the standard deviation, and other statistics for all the variables at once with
+**Statistics.**  We can compute the mean, the standard deviation, and other statistics for all the variables (this means that they are operating column by column) at once with
 
 ```python
 df.mean()
