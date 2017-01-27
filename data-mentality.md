@@ -57,9 +57,10 @@ We're looking for a topic that satisfies two conditions:  (1) we find it interes
 
 * **Start with what interests you.**  Economics, finance, marketing, emerging markets, movies, sports. You be the judge.  Be specific:  You want a topic, not a category.
 
-* **Start with data.**  Take a dataset you find interesting, ask what you might do with it.  If you're not sure where to look, try our list of [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
+* **Start with data.**  Take a dataset you find interesting, ask what you might do with it.  If you're not sure where to look, try our list of [data sources](http://nyu.data-bootcamp.com/data/
+).
 
-* **Start with an example.**  Find an analyst report, blog post, or graphic you like.  Ask where the data comes from and think about whether you can replicate and/or extend it. The blogs listed on our [data sources page](http://databootcamp.nyuecon.com/bootcamp_data/) are a good place to start.
+* **Start with an example.**  Find an analyst report, blog post, or graphic you like.  Ask where the data comes from and think about whether you can replicate and/or extend it. The blogs listed on our [data sources page](http://nyu.data-bootcamp.com/data/) are a good place to start.
 
 If you're not sure how this works, watch Steve Levitt's [video](https://youtu.be/r5jATFtKtI8?t=5m10s) about working with company data. It's an entertaining and informative 50 minutes. Note specifically how he comes up with ideas for using the data he's given.
 
