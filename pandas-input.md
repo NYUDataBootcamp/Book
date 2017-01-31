@@ -579,7 +579,7 @@ af = pd.DataFrame(data)
 We've covered a lot of ground, but if you're looking for more we suggest:
 
 * On Pandas:  Chris Moffitt's [Practical Business Python blog](http://pbpython.com/archives.html) has a good series on Pandas from the perspective of an Excel user.  For a more concise summary, try [Quandl's cheatsheet](https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+Pandas%2C+SciPy%2C+NumPy+Cheat+Sheet.pdf).
-* On data:  See the list of [data sources](http://databootcamp.nyuecon.com/bootcamp_data/) on the [course website](http://databootcamp.nyuecon.com/).
+* On data:  See the list of [data sources](http://nyu.data-bootcamp.com/bootcamp_data/) on the [course website](http://nyu.data-bootcamp.com/).
 * On backslashes (and other obscure characters in code):  [xkcd](http://xkcd.com/1638/).
 
 

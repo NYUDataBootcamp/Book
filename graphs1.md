@@ -118,7 +118,7 @@ You get the idea.  To get a sense of what's possible, take a look at these two n
 * Links.   We construct a link with the text in square brackets and the url in parentheses immediately afterwards.  Try this one:
 
   ```
-  [Data Bootcamp course](http://databootcamp.nyuecon.com/)
+  [Data Bootcamp course](http://nyu.data-bootcamp.com/)
   ```
 
 We can find more information about Markdown under Help.  Or use your Google fu.  We like the [Daring Fireball](https://daringfireball.net/projects/markdown/) description.

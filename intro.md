@@ -102,7 +102,7 @@ The resources section at the end of each chapter is a collection of (mostly) lin
 
 Here we'll say simply that all of the materials for this book and the associated course are posted online:
 
-* Website.  Everything is posted on our [class website](http://databootcamp.nyuecon.com/).
+* Website.  Everything is posted on our [class website](http://nyu.data-bootcamp.com/).
 * Book.  It's hosted by [GitBook](https://www.gitbook.com/book/nyudatabootcamp/data-bootcamp/details).
 * Code.  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/NYUDataBootcamp/Materials/tree/master/Code) of the GitHub repo.  If you save them, **remember to click on the Raw button** in the upper right.  (This is an oddity of GitHub, which distinguishes between a display of the file and the file iself.)
 * Other materials.  Pretty much everything else is available within a repository in our [GitHub organization](https://github.com/NYUDataBootcamp).
