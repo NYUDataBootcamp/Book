@@ -58,6 +58,7 @@ We can verify that this type is indeed a DataFrame (and that we haven't been lyi
 
 ```python
 type(df)
+```
 
 returns
 
@@ -322,4 +323,3 @@ Let's put what we've learned to work:
 **Exercise.** Copy the DataFrame `df` into an empty spreadsheet on your computer using the `to_clipboard()` method.
 
 **Exercise.**  Produce a bar chart of `df` with the statement (Hint: use the docstring for `df.plot` to see what `kind` argument does)
-
