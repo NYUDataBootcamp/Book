@@ -34,10 +34,13 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 
 * Click **[HERE](http://continuum.io/downloads)** or Google "Anaconda downloads."
 * Scroll to find "Anaconda for Windows" or further down for "Anaconda for OS X."
-* Find the option for **Python 3.5.** **NOT** Python 2.7!  If you get 2.7, you'll have to start over.
+* Find the option for **Python 3.6.** **NOT** Python 2.7!  If you get 2.7, you'll have to start over.
 * Click the **64-bit Graphical Installer** to start the download.
 
-**Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says (keep default options and make sure that **it sets Anaconda as your default Python installation!**).
+**Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says...
+
+* For Mac: keep default options and make sure that **it sets Anaconda as your default Python installation!**.
+* For Windows: in the box "advanced Installation options", click the box "Add Anaconda to my PATH environment". This option will allow us to call stuff from the command prompt. Again: be sure **it sets Anaconda as your default Python installation!**.
 
 **Step 3. Find and run IPython.**  Look wherever programs are on your computer.
 
@@ -72,7 +75,7 @@ You see here that Spyder has a number of different components.  It's overwhelmin
 * **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  This is where output from our programs will show up.  On startup it will display something like
 
   ```
-  Python 3.5.0 |Anaconda 2.4.0 (64-bit)
+  Python 3.6.0 |Anaconda 2.4.0 (64-bit)
   etc etc
 
   In [1]:
@@ -176,5 +179,3 @@ More on the Anaconda distribution and its contents:
 * Spyder [documentation](https://pythonhosted.org/spyder/).
 * IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  You can also get help in Jupyter:  click on "Help" at the top and choose "User Interface Tour."
 * [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/) to other documentation and support.  More than you'll ever want or need.
-
-
