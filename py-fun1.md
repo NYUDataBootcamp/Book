@@ -561,7 +561,7 @@ The result `i` is the integer 12.
 s = str(12)
 print('s has type', type(s))
 t = str(12.34)
-print('t has type', type(f))
+print('t has type', type(t))
 ```
 
 **Converting strings to lists.** One more type conversion:  We can convert a string to a list of its characters.  For example, we convert the string `x = abc'` to the list `['a', 'b', 'c']` with `list(x)`.  Run this code to see how it works:
