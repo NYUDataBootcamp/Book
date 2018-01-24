@@ -3,7 +3,7 @@
 ---
 **Overview.** We install Python, then run a test program to make sure it's working.
 
-**Python tools.**  Anaconda distribution, Spyder and IPython/Jupyter coding environments.
+**Python tools.**  Anaconda distribution, Jupyter.
 
 **Buzzwords.**  Package, distribution, environment, mtwn.
 
@@ -17,7 +17,7 @@ We'll will focus on one Python environment in this class:
 
  * **Jupyter** is a browser-based interface for running **Jupyter notebooks**, which combine code, output, and documentation. If you google around, you will see that this is _the_ format in which results are analyzed and communicated by data scientists. For example, here are some notebooks that make this point: [three](http://savvastjortjoglou.com/nba-shot-sharts.html) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/NYUDataBootcamp/SQLBootcamp/blob/b048ce3986128941d32bf20731a56c47e17daad0/notebooks/SQL_Intro.ipynb) Get comfortable with it.
 
-In previous version of this course, we have also used a more traditional  "[IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)" to write and run code. This enviornment is useful, especially for more invovled computation that does not require the presentation and interactivity that Jupyter provides. **Spyder** is the IDE we have used in the past and it comes pre-installed with the Anaconda distribution. In future, keep an eye out for [Jupyter Lab](https://github.com/jupyterlab/jupyterlab) which combines the best of both worlds (interactive notebook and IDE) in one environment.
+In previous version of this course, we have also used a more traditional  "[IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)" to write and run code. This enviornment is useful, especially for more invovled computation that does not require the presentation and interactivity that Jupyter provides. **Spyder** is the IDE we have used in the past and it comes pre-installed with the Anaconda distribution. In future, keep an eye out for [**Jupyter Lab**](https://github.com/jupyterlab/jupyterlab) which is still under development, but combines the best of both worlds (interactive notebook and IDE) in one environment.
 
 We will write and run Python programs in both environments.
 
