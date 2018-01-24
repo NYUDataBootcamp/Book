@@ -561,7 +561,7 @@ The result `i` is the integer 12.
 s = str(12)
 print('s has type', type(s))
 t = str(12.34)
-print('t has type', type(f))
+print('t has type', type(t))
 ```
 
 **Converting strings to lists.** One more type conversion:  We can convert a string to a list of its characters.  For example, we convert the string `x = abc'` to the list `['a', 'b', 'c']` with `list(x)`.  Run this code to see how it works:
@@ -576,7 +576,7 @@ print(y)
 
 **Exercise.**  How would you convert the integer `i = 1234` to the list `l = ['1', '2', '3', '4']`?
 
-**Exercise.** What is the result of `list(str(int(float('12.34')))`?  Why?  *Hint:* Start in the middle (the string `'12.34'`) and work your way out, one step at a time.
+**Exercise.** What is the result of `list(str(int(float('12.34'))))`?  Why?  *Hint:* Start in the middle (the string `'12.34'`) and work your way out, one step at a time.
 
 **Exercise (challenging).**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2015'`.  How would we construct a string for the following year?  *Hint:*  Start by converting year to an integer.
 

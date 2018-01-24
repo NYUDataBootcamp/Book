@@ -447,7 +447,7 @@ for number in range(1, 11):
     print('Number and its square:', number, square)
 ```
 
-Again we start at zero and work our way up to four.
+Here we have `number` start at one and work its way up to ten.
 
 **Example.** Here we compute the sum of integers from one to ten:
 
