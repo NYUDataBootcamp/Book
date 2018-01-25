@@ -1,15 +1,13 @@
 # Python fundamentals 1
 
 ---
-**Overview.**  Time to start programming!  We work our way through some of the essentials of Python's core language.  We do this in the Spyder coding environment.  Part 1 of 2.
+**Overview.**  Time to start programming!  We work our way through some of the essentials of Python's core language.  We will do this within a Jupyter Notebook and along the way become familiar Markdown other properties of the notebook environment.  Part 1 of 2.
 
-**Python tools.**  Syntax, Spyder, calculations, assignments, strings, lists, built-in functions, objects, methods, tab completion, object inspector.
+**Python tools.**  Syntax, Jupyter, calculations, assignments, strings, lists, built-in functions, objects, methods, tab completion, object inspector.
 
 **Buzzwords.** Isn't that enough?
 
 **Trigger warning.**  Technical content, cannot be mastered without effort.
-
-**Code.**  [Link](https://raw.githubusercontent.com/NYUDataBootcamp/Materials/master/Code/Python/bootcamp_fundamentals_1.py)
 
 ---
 
@@ -19,23 +17,100 @@ Don't panic, it's just jargon.  If you put some effort into this over the next 2
 
 The challenge and beauty of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).
 
-We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  There we can not only run code, we can access help.
+We mix Python concepts with an introduction to **Jupyter** which also comes with its own features (outside of the Python ecosystem). A key feature of Jupyter notebooks is the ability to mix text with code. The text component is **Markdown** which is a text fromating language (you provide the text, it makes the style) that can easily be converted into HTML. May be **mtwn** but its ok!
 
-## Reminders
+## Jupyter essentials.
 
-Remind yourself about the following:
+**Opening Jupyter** Let's remind ourselves how to do this...
 
-* Spyder. An environment for writing and running Python programs.   Its components include an editor, an IPython console, and the Object explorer.
+* Open your terminal (command prompt on Windows)
 
-* `Data_Bootcamp` directory.  The place in your computer where you store files for this course.
+* Type `jupyter notebook` and press enter.  This will open a tab in your browser with the word Jupyter at the top and your computer's directory structure below it.
 
+* In the browser tab, navigate to your `Data_Bootcamp` directory/folder.
+
+* Click on the New button in the upper right and choose `Python 3` (it may also refer to this as `Python[Root]`.
+
+In your browser, you should have an empty notebook with the word Jupyter at the top.  Below it is a **menubar** with the words File, Edit, View, Cell, Kernel, and Help.  Below that is a **toolbar** with various buttons.  You can see all of these components here:
+
+![Jupyter environment](figs/jupyter_notebook.png "Jupyter")
+
+If you have a few minutes, click on Help in the menubar and choose User Interface Tour.
+
+Let's put some of these tools to work:
+
+* Change the notebook name.  Click on the name (`Untitled` if we just created a new notebook) to the right of the word Jupyter at the top. A textbox should open up.  Use it to change the name to `bootcamp_sandbox`.
+
+* Toolbar buttons.  Let your mouse hover over one of them to see what it does.
+
+* Add a cell.  Click on the `+` in the toolbar to create a new cell.  Choose Code in the toolbar's dropdown menu.  Type this code in the cell:
+
+  ```python
+  import datetime as dt
+  print('Welcome to Data Bootcamp!')
+  print('Today is: ', dt.date.today())
+  ```
+
+  Now click on Cell in the menubar and choose Run cell.  You should see the welcome message and today's date below the code.
+
+* Add another cell.  Click on the `+` to create another cell and choose Markdown in the toolbar's dropdown menu. Markdown is text; more on it shortly.  Type this in the cell:
+
+  ```
+  Your name
+  Data Bootcamp sandbox for playing around with Jupyter notebooks
+  ```
+
+  Run this cell as well.
+
+You get the idea.  To get a sense of what's possible, take a look at these two notebooks [1](https://github.com/NYUDataBootcamp/Materials/blob/master/Code/notebooks/bootcamp_test.ipynb) [2](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).
+
+In addition to the buttons near the top of your notebook, there are also **keyboard shortcuts** for all these commands. We'll tell you about them along the way. Once we got used to them, we found that the keyboard shortcuts are an easier and more efficient way to do what we need. Here are the ones I find most useful:
+
+* The command for creating a new cell is to press escape to be in *command mode* and then press `a` to insert a new cell above the current one and `b` to insert a new cell below the current cell. How do I know the cell is in command mode? First, there should be a slim vertical bar to the left of the cell which should be blue when in command mode, green otherwise. Second, you won't see a cursor!
+
+* To change the type of cell (Markdown or Python), in *command mode* you type `y` for a python cell and `m` for a markdown cell.
+
+* To run a cell, just hit `shift` and `enter` at the same time.  
+
+**Markdown essentials.**  Markdown is a simplified version of html ("hypertext markup language"), the language used to construct basic websites.  html was a great thing in 1995, but now that the excitement has worn off we find it painful.  Markdown, however, has a zen-like simplicity and beauty.  Here are some things we can do with it:
+
+* Headings.  Large bold headings are marked by hashes (`#`).  One hash for first level (very large), two for second level (a little smaller), three for third level (smaller still), four for fourth (the smallest).  Try these in a Markdown cell to see how they look:
+
+   ```
+   # Data Bootcamp sandbox
+   ## Data Bootcamp sandbox
+   ### Data Bootcamp sandbox
+   ```
+
+  Be sure to run the cell when you're done (`shift enter`).
+
+* Bold and italics.  If we put a word or phrase between double asterisks, it's displayed in bold.  Thus `**bold**` displays as **bold**.  If we use single asterisks, we get italics:  `*italics*` displays as *italics*.
+
+* Bullet lists.  If we want a list of items marked by bullets, we start with a blank line and mark each item with an asterisk on a new line:
+
+  ```markdown
+  * something
+  * something else
+  ```
+
+  Try it and see.
+
+* Links.   We construct a link with the text in square brackets and the url in parentheses immediately afterwards.  Try this one:
+
+  ```
+  [Data Bootcamp course](http://nyu.data-bootcamp.com/)
+  ```
+
+We can find more information about Markdown under Help.  Or use your Google fu.  We like the [Daring Fireball](https://daringfireball.net/projects/markdown/) description.
+
+Markdown is ubiquitous.  This book, for example, is written in Markdown.  Look [here](https://github.com/NYUDataBootcamp/Book) for a list of chapter files.  Click on one to see how it displays.  Click on the Raw button at the top to see the Markdown file that produced it.
 
 **Exercise.**  Ask questions if you find any of these steps mysterious:
-
-* Start Spyder.
-* In Spyder, point to the editor, IPython console, and Object inspector.
-* Open a new (empty) code file in Spyder and save it as  `bootcamp_class_pyfun1.py` in your `Data_Bootcamp` directory/folder.  This file will serve as your notes for this class.
-
+* Close Jupyter.
+* Start Jupyter.
+* In Jupyter, open an new Ipython notebook within your `Data_Bootcamp` directory/folder, point to the code cell, the name of the notebook, and the help button.
+* Save the file  `bootcamp_class_pyfun1` in your   This file will serve as your notes for this class.
+* Create a description cell in Markdown at the top of your notebook.  It should include your name and a description of what you're doing in the notebook.  For example: "Mike Waugh's first notebook for Python fundamentals 1" and a date.
 
 ## The logic of Python programs
 
@@ -52,11 +127,11 @@ Most of the programs in this course have the structure:
 Each of these bullet points is typically associated with a number of lines of code, possibly a large number, but that's the general idea.
 
 
-## Calculations in Spyder's IPython console
+## Calculations
 
-We'll do lots of numerical calculations.  That's mostly what managing data is about: adding things up, dividing one thing by another, and so on. We'll do this initially in Spyder's **IPython console**, typically located in the lower right corner (look for a tab with this label).
+We'll do lots of numerical calculations.  That's mostly what managing data is about: adding things up, dividing one thing by another, and so on.
 
-To see how calculations work in Python, type these expressions in Spyder's IPython console **one at a time**:
+To see how calculations work in Python, type these expressions their **own individual cell**:
 
 ```python
 2*3
@@ -74,9 +149,9 @@ In [1]: 2*3
 Out[1]: 6
 ```
 
-The first line is our input, we typed it.  The number in brackets `[1]` is a line number.  We don't type it, it's there in the console to begin with.  As we proceed the number [1] increases to [2], [3], and so on.  The second line -- the one that starts `Out[1]` -- is the response or output Python produces.
+The first line is our input, we typed it.  The number in brackets `[1]` is a line number.  We don't type it, it's there in the console to begin with.  As we proceed the number [1] increases to [2], [3], and so on.  The second line --- the one that starts `Out[1]` --- is the response or output Python produces.
 
-The second calculation, `2 * 3`, does the same thing.  The spaces around the * don't change the output.  As a general rule, we can put spaces wherever we think they make the code more readable -- In fact, Python's [style guide](https://www.python.org/dev/peps/pep-0008/) encourages you to [use white space](https://www.python.org/dev/peps/pep-0008/#whitespace-in-expressions-and-statements) in a way that makes your code readable.
+The second calculation, `2 * 3`, does the same thing.  The spaces around the * don't change the output.  As a general rule, we can put spaces wherever we think they make the code more readable --- In fact, Python's [style guide](https://www.python.org/dev/peps/pep-0008/) encourages you to [use white space](https://www.python.org/dev/peps/pep-0008/#whitespace-in-expressions-and-statements) in a way that makes your code readable.
 
 The third calculation is division.  The input and output are
 
@@ -116,7 +191,7 @@ Our last calculation is the log function.  Entering `log(3)` generates the messa
 
 Or maybe we should use scare quotes:  "Assigning" "values" to "variables."
 
-We'll start with examples and explain what they do.  Type these two lines into the IPython console one at at time.
+We'll start with examples and explain what they do.  Type these two lines into a code cell.
 
 ```python
 x = 2
@@ -131,7 +206,7 @@ In each of these lines:
 
 We call statements like these **assignments**:  We assign a value to a variable.
 
-We can see the results of these assignments by checking the contents of the variables `x` and `y`.  In the IPython console, typing a variable and hitting return gives us its value. If we type `x` and `y`, one at a time, we get
+We can see the results of these assignments by checking the contents of the variables `x` and `y`.  In a code cell, typing a variable and hitting return gives us its value. If we type `x` and `y`, one at a time, we get
 
 ```
 In [7]: x
@@ -142,22 +217,24 @@ Out[8]: 3
 
 So we see that the variables now contain the values we assigned them.
 
-Variables are handy ways of storing values.  We can use them in future calculations simply by using their names, just as we would use a cell address in Excel.  Here's an example.  Type this into the IPython console:
+Variables are handy ways of storing values.  We can use them in future calculations simply by using their names, just as we would use a cell address in Excel.  Here's an example.  Type this into a code cell:
 
 ```python
 z = x/y
 ```
 
-If we type `z` in the console and hit return, we get
+If we type `z` in another code cell and then evaluate it, we get
 
 ```
 In [9]: z
-Out[9]: .666666666
+Out[9]: 0.666666666
 ```
 
 What's going on here?  We take `x` (which now has a value of 2) and divide it by `y` (which now has the value of 3) and assigns it to the variable `z`.  The result is a computer's version of two-thirds.
 
-**Exercise.** Type `w = 7` in the IPython console.  What does the code `w = w + 2` do?  Why is this not a violation of basic mathematics?
+**Exercise.** Type `w = 7` in a cell.  In the same cell, next line below, type `w = w + 2`. In the next line below type `w` (so we can see the output). What does this code do?  Why is this not a violation of basic mathematics?
+
+**Exercise.** In another code cell type `w = w + 2` and then `w` below it (again so we can see the output). Evaluate this cell once. Do it again. Do it again. What is going on here?
 
 **Exercise.**  Suppose we borrow 200 for one year at an interest rate of 5 percent.  If we pay interest plus principal at the end of the year, what is our total payment?  Compute this using the variables `principal = 200` and `i = 0.05`.
 
@@ -165,7 +242,7 @@ What's going on here?  We take `x` (which now has a value of 2) and divide it by
 
 **Exercise (challenging).**  Suppose we have two variables, `x` and `y`.  How would you switch their values, so that `x` takes on `y`'s value and `y` takes on `x`'s?
 
-**Exercise (challenging).**  Type `x = 6` in the IPython console.  We've reassigned `x` so that its value is now 6, not 2. If we type and submit `z`, we see
+**Exercise (challenging).**  Type `x = 6` in a cell.  We've reassigned `x` so that its value is now 6, not 2. If we type and submit `z`, we see
 
 ```
 In [10]: z
@@ -177,7 +254,7 @@ But wait, if `z` is supposed to be `x/y`, and `x` now equals 6, then shouldn't `
 
 ## Displaying results with the `print()` function
 
-We saw that when we performed a calculation, such as `z = x/y`, we had to ask to see the result.  The `print()` function gives us another way to do that.  If we type `print(z)` in the IPython console, we get
+We saw that when we performed a calculation, such as `z = x/y`, we had to ask to see the result.  The `print()` function gives us another way to do that.  If we type `print(z)`  we get
 
 ```
 In [11]: print(z)
@@ -201,29 +278,28 @@ By default, the output is separated by spaces.
 We'll use more complicated print statements than this, which we'll explain as we go.  But if you see something you don't recognize, remember to **ask questions**.
 
 
-## Getting help in Spyder
+## Getting help in Jupyter
 
-If you want to know more about a function, there are two good ways to do it in Spyder.  This works for any function, but using print as our examples we can:
+If you want to know more about a function, the main approach is to simply type the function name and then a question mark after it in a code cell and then evaluate it. This works for any function, but using print as our examples we can:
 
-* Type `print?` in the IPython console.
-* Type `print` in the Object inspector.
+* Type `print?` in the code cell and hit `shift` and `enter`
 
 The same approaches work for other functions.  We use them both a lot.  If they fail, either because there's no help or the help is incomprehensible, we fall back on Google fu.
 
-**Exercise.**  Run this statement:  `print(x, y, z, sep='|')`.  Use the output and Spyder's help to explain what the `sep` argument does.
+**Exercise.**  Run this statement:  `print(x, y, z, sep='|')`.  Use the output and Jupyter's help to explain what the `sep` argument does.
 
 
 ## Strings
 
 We often work with non-numerical data, collections of characters that might include letters, numbers, or other symbols.  Such things show up in a lot in data work, as variable names (GDP, income, volatility) and even as data (country or customer names, for example).  We refer these as **strings**.  This doesn't mean what we think it means.  No, not the stuff we tie up packages with, but a "string" of characters like letters or numbers.  It's one of many mysterious uses of ordinary words we'll run across as we learn to code.  For more on this one, see [here](http://stackoverflow.com/questions/880195/the-history-behind-the-definition-of-a-string).
 
-We create strings by putting characters between quotation marks: 'Chase', "Spencer", 'Sarah', "apple", and even '12' are all strings.  Single and double quotes both work.
+We create strings by putting characters between quotation marks: 'Chase', "Spencer", 'Sarah', "apple", and even "12" are all strings.  Single and double quotes both work.
 
-The last example is a confusing one, because it looks like a number.  It's not.  The number `12` is between quotes, so it's a string.  If we try to use it as a number, it doesn't work.  Try, for example, `'12'/3`.  This generates the error:  `TypeError: unsupported operand type(s) for /: 'str' and 'int'`.  What this means is that we tried to divide a string (`'12'`) by an integer (`3`).  That's no different to Python than trying to divide your name by three, it can't make sense of it.
+The last example is a confusing one, because it looks like a number.  It's not.  The number `"12"` is between quotes, so it's a string.  If we try to use it as a number, it doesn't work.  Try, for example, `'12'/3`.  This generates the error:  `TypeError: unsupported operand type(s) for /: 'str' and 'int'`.  What this means is that we tried to divide a string (`"12"`) by an integer (`3`).  That's no different to Python than trying to divide your name by three, it can't make sense of it.
 
-We repeat:  **a string is a collection of characters between quotes**. The characters can be pretty much anything. Therefore `12` is a number (no quotes), but `'12'` is a string.
+We repeat:  **a string is a collection of characters between quotes**. The characters can be pretty much anything. Therefore `12` is a number (no quotes), but `"12"` is a string.
 
-Here are some other examples, which we assign to variable names for later use. Type them into Spyder's IPython console **one at a time**:
+Here are some other examples, which we assign to variable names for later use. Type them into its **own individual cell**:
 
 ```python
 a = 'some'
@@ -232,9 +308,9 @@ c = a + b
 d = '12.34'
 ```
 
-What do you see?  The first two are probably obvious:  we assign the characters in single quotes on the right to the variables on the left.
+What do you see?  The first two are probably obvious:  We assign the characters in single quotes on the right to the variables on the left.
 
-The third line is something new:  we add the string `some` to the string `thing`.  What would you expect to get?  Try `print(c)` to find out.  That gives us the answer: `c = 'something'`.  We've simply stitched the two strings together, one after the other.
+The third line is something new:  We add the string `some` to the string `thing`.  What would you expect to get?  Try `print(c)` to find out.  That gives us the answer: `c = 'something'`.  We've simply stitched the two strings together, one after the other. **WOW...** this is awesome.
 
 Strings also allow us to produce better-looking output.  In the previous section, for example, we can change the statement `print(z)` to `print('The value of z is ', z)`.  The first argument (or input), `'The value of z is '`, is a string.  The second argument, `z`, is a variable.  Together they produce the output `The value of z is  0.6666666666666666`, which is clearer than the number `0.6666666666666666` on its own.  Or we could spread this over two lines:
 
@@ -260,12 +336,15 @@ https://en.wikipedia.org/wiki/String_literal
 -->
 
 
-## Running programs in Spyder
+## Structuring code within Jupyter
 
-If we're writing longer programs, it's generally easier to type them into an editor where we can correct any mistakes we make, just as we do in a word processing program.
+Lets take a quick step back and discuss how to **use** Jupyter to create effective, readable code. Often we are writing much longer programs. In this case it would be silly to have every single cell be composed of just one line. Why? Lots of reasons, but the most important reasons is that that reading the code AND understanding it's context within the whole program would be very hard to do. **And readable code is something that we should aspire to (see the links in the next section).**
 
+OK. What should I do? Use a code cell for a certain task. For example, one code cell is dedicated to reading in the data. Another code cell performs one manipulation of the data (which could take multiple lines of code), another code cell performs a different manipulation, and then another is dedicated to plotting a figure. So each code cell is accomplishing a specific task at hand.
 
-Let's give it a try.  Type these commands into your file in the Spyder editor:
+Why not put everything in one code cell? Again, this is problematic regarding readability. Second, chopping up the code into different cells is good for debugging. For example, you may have aspects of your code that works, but other parts are having problems (it will happen...). So rather than running the whole program over and over again to debug only a subset, you have that subset of code in its own cell and then work on that on its own.
+
+Let's give it a try.  Type these commands into **one** code cell:
 
 ```python
 a = 'some'
@@ -273,50 +352,23 @@ b = 'thing'
 c = a + b
 print('c =', c)
 ```
+When we run the code, we see that the first three lines produce no output.  The last one produces the output `c = something`. What we have now is one code cell performing one distinct task.  
 
-Save the file (File, then Save).
+## Using Markdown to facilitate readability
 
-<!--
-To run this code, we need to save it in a file.  In Spyder's editor, click on "File" in the upper left corner and choose "Save."  To set the file name (the default `Untitled0.py` isn't all that informative), we choose "Save as" and pick a file name like `somename.py`.  The part after the period -- the "extension" -- is important, it identifies the file as a Python program.  Make sure to save it in the `Data_Bootcamp` directory so we can find it later.
--->
+One of the nice features of Jupyter is that it can mix nicely formatted text via Markdown with code. This allows you to describe, at a high-level the steps that your analysis is walking through. The "high-level" aspect of this is nice in that you can structure your notebook where, say your Manager, can follow your steps without having to delve deep into the details of the code. Moreover, this allows us to "tell the story" when working with data.
 
-Once we've saved the file, we can run it in Spyder by clicking on the large green arrow in the Spyder **toolbar** at the top of the editor window:
-
-![Spyder toolbar](figs/spyder_toolbar.png "Spyder's toolbar")
-
-When we run the code, we see that the first three lines produce no output.  The last one produces the output `c = something` in the IPython console.
-
-
-## Code cells in Spyder
-
-Spyder has another cool feature we use a lot:  we can carve out blocks of code ("cells") and run them separately.  That way we can try out small pieces of code one at a time.
-
-The idea is to put the separator `#%%` (hash, percent, percent) between blocks of code, called **cells**, so that we can run them separately.  Consider the code:
-
-```python
-a = 'some'
-b = 'thing'
-c = a + b
-print('c =', c)
-#%%
-x = 2
-y = 3
-z = x/y
-print('z =', z)
+For example, in the cell above the code discussed above, you could insert a cell saying something to the effect:
+```Markdown
+# Creating a word by addition
+Here is an example where I am using the addition function on strings to create the word something
 ```
 
-The separator `#%%` in the middle divides the file into two cells that we can run one at a time.  That allows us to run and test blocks of code without running the whole program.  It doesn't make much difference with code this simple, but in longer programs it can be a real time saver.
-
-Here's how it works:
-
-* In the Spyder editor, click on a code cell.  The cell will indicate its selection with a darker background.
-* Now go to the toolbar above the editor.  The large green triangle runs the whole program. The one to its right displays the text "Run current cell" if you move the cursor to it.  Click on it to run the selected cell.
-
-**Exercise.** Copy or type the code above into your Python program.  Save it.  Run each cell, one at a time.  Check the output to make sure it worked.
+**Exercise.** Do this. Remind yourself how to create a markdown cell and insert the markdown code above the "something" code cell.
 
 ## Add comments to your code
 
-One of the rules of good code is that **we explain what we've done -- in the code**.  In this class, we might think about writing code that one of our classmates can understand without help.  These explanations are referred to as comments.
+We also want to mechanically explain what individual lines of code our doing. One of the rules of good code is that **we explain what we've done---in the code**.  Think about this aspect as writing and explaining code that one of our classmates can understand without help. These explanations are referred to as comments.
 
 Add a comment with the hash character (#).  Anything in a line after a hash is a comment, meaning it's ignored by Python.  Here are some examples:
 
@@ -328,7 +380,10 @@ Add a comment with the hash character (#).  Anything in a line after a hash is a
 print(4+5)      # here we're printing it
 ```
 
-We often put comments like this in our code.  Not quite this basic, but close. One of the unwritten "laws of nature" in programming is that code is read much more often than it is written [1](http://docs.python-guide.org/en/latest/writing/style/) [2](https://blogs.msdn.microsoft.com/oldnewthing/20070406-00/?p=27343) [3](https://blog.codinghorror.com/when-understanding-means-rewriting/). Writing informative comments will not only lead to others thanking you for saving them time, but you will find that you thank yourself very frequently.
+We often put comments like this in our code.  Not quite this basic, but close. One of the unwritten "laws of nature" in programming is that code is read much more often than it is written. See these links...they're awesome:
+[1](http://docs.python-guide.org/en/latest/writing/style/) [2](https://blogs.msdn.microsoft.com/oldnewthing/20070406-00/?p=27343) [3](https://blog.codinghorror.com/when-understanding-means-rewriting/).
+
+Writing informative comments will not only lead to others thanking you for saving them time, but you will find that you thank yourself very frequently.
 
 **Exercise moving forward.** Practice writing comments **all the time**. Whenever you learn something new, write a comment explaining it in your code. It feels tedious, but the best coders always explain their work. It's a good habit to develop.
 
@@ -719,4 +774,3 @@ Python for humanities, solid intro:  http://fbkarsdorp.github.io/python-course/
 -->
 
 These sources go well beyond what we do in this chapter, but we'll catch up with some of it later on.
-

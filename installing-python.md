@@ -115,8 +115,9 @@ We're now ready to write and run Python programs. Take a bow.
 Environment | File
 :---: | :---:
 MS Word  | Word document
-MS Excel | Excel file
-IPython notebook |
+MS Excel | Excel file  
+  | | IPython notebook  
+
 
 
 **Exercise.** What version of Python are we using?
