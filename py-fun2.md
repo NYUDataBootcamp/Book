@@ -35,15 +35,14 @@ Some things from previous chapters that we'll use a lot:
 
 * Methods and objects.  It's common in Python to work with objects using methods.  We apply the method `justdoit` to the object `x` by typing `x.justdoit`.
 
-* Spyder.  An environment for writing Python programs.  The various windows include an editor, an IPython console, and the Object explorer.
 
 * Comments. Use the hash symbol `#` to add comments to your code and explain what you’re doing.
 
-* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook.  We call that "tab completion."
+* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in an IPython (Jupyter) notebook.  We call that "tab completion."
 
 * Help.  We can get help for a function or method `foo` by typing `foo?` in the IPython console or `foo` in the Object explorer.  Try each of them with the `type()` function to remind yourself how this works.
 
-And while we're reviewing:   Start Spyder, open a new file, and save as `bootcamp_class_pyfun2.py` in your `Data_Bootcamp` directory/folder.
+And while we're reviewing:   Start Jupyter, open a new file, and save as `bootcamp_class_pyfun2.py` in your `Data_Bootcamp` directory/folder.
 
 
 ##  Dictionaries
@@ -211,7 +210,7 @@ if 1 > 0:    # read this like "if 1>0 IS TRUE, then do the thing on the next lin
 The syntax here is precise:
 
 * The `if` statement **ends with a colon**. That's standard Python syntax, we'll see it again.  It's not optional.
-* The code that follows is **indented exactly four spaces**. Also not optional. Spyder does it automatically.
+* The code that follows is **indented exactly four spaces**. Also not optional. Jupyter does it automatically.
 
 Both of these features -- a colon at the end of the first line, indent the rest four spaces -- show up in lots of Python code.  It's very compact, and the indentation makes the code easy to read.
 
@@ -488,7 +487,7 @@ print('The price of the bond is', price)
 
 The answer is 100, which we might know because the coupon and yield are the same once we convert the latter to a percentage.  Python gives us `99.99999999999997`, which is the computer's version of 100.
 
-**Digression.**  When we originally wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as `invalid syntax` with a warning sign to the left of the text.  Evidently the name `yield` is reserved for [something else](https://pythontips.com/2013/09/29/the-python-yield-keyword-explained/).  As general rule, it's a good idea to pay attention to the hints like this.
+**Digression.**  When we originally wrote this code, we used the variable name `yield` instead of `ytm`.  This was problematic for the following reason: evidently the name `yield` is reserved for [something else](https://pythontips.com/2013/09/29/the-python-yield-keyword-explained/).  As general rule, it's a good idea to pay attention to issues of this nature, e.g. don't name a variable the same as a built-in function/method, etc.
 
 **Loop with condition.**  Sometimes we want to go through a loop until some condition is met.  This combination of a loop and a condition requires an extra level of indenting.  It also introduces a new ingredient:  the `break` statement, which tells Python to exit the loop.
 

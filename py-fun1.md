@@ -265,7 +265,7 @@ Evidently this displays the value of `z`, namely `0.6666666666666666`.  We will 
 
 The print function displays whatever we include in parentheses after the word print:  for example, `print(x)`.  If we want to print more than one thing, we separate them with commas; for example, `print(x, y)`. That's the **general structure of functions** in Python:  a function name (in this case `print`) followed by inputs ("arguments" or "parameters") in parentheses that are separated by commas.  We usually refer to the `print()` function, with explicit parentheses, to remind ourselves that it requires input of some kind.
 
-So if we want to verify the calculation of `z`, we can type `print(z)` in the IPython console.  If we want to print all the calculations from the previous section, we can type `print(x, y, z)`:
+So if we want to verify the calculation of `z`, we can type `print(z)` in a code cell.  If we want to print all the calculations from the previous section, we can type `print(x, y, z)`:
 
 ```
 In [12]: print(x, y, z)
@@ -465,7 +465,7 @@ Lists are one of the fundamental Python **data structures**, a term that means a
 
 A Python list is what it sounds like:  an ordered collection of items.  The items can be lots of things:  numbers, strings, variables, or even other lists.
 
-**Creating lists.** We create lists by putting **square brackets around a collection of items** separated by commas.  Here are some examples. Type each line of code into Spyder's IPython console and run them.
+**Creating lists.** We create lists by putting **square brackets around a collection of items** separated by commas.  Here are some examples. Type each line of code into a code cell and run them.
 
 ```python
 numberlist = [1, 5, -3]
@@ -527,7 +527,7 @@ Python has a lot of basic "built-in" functions.  We've already seen the `print()
 
 **The `len()` (length) function.**  This tells us the length of an object.  We can work this one out for ourselves:
 
-**Exercise.**  Describe the output of typing each of these in the IPython console **one line at a time**:
+**Exercise.**  Describe the output of typing each of these **one cell at a time**:
 
 ```python
 len('hello')
@@ -542,7 +542,7 @@ len(12.34)
 What do you think is happening?
 
 
-**The `type()` function.**  One of our favs.  This one tells us what kind of object we have.  To see how it works, type the following into the IPython console one by one:
+**The `type()` function.**  One of our favs.  This one tells us what kind of object we have.  To see how it works, type each of these **one cell at a time**:
 
 ```python
 type(2)
@@ -567,7 +567,7 @@ Not to kill the suspense, but here's what we should see:
 
 The type function is more helpful than you might guess.  A lot of what we do in programming is deal with objects of different types and, when necessary, convert one type to another.  The first step is to identify the type of the object of interest.
 
-**Exercise.** Try each of these, one at a time, in the IPython console and explain the output:
+**Exercise.** Try each of these, one at a time, in a code cell and explain the output:
 
 ```python
 type('a')
@@ -651,7 +651,7 @@ Functions and methods differ primarily in their syntax:
 
 We used the former in the previous section and consider the latter here.
 
-What methods are available to work with a given object?  Take, for example, the list `numberlist = [1, 5, -3]`.  To get the list of available methods, we use the IPython console and type:
+What methods are available to work with a given object?  Take, for example, the list `numberlist = [1, 5, -3]`.  To get the list of available methods, type in a code cell:
 
 ```python
 numberlist.[tab]    # here you hit the tab key, don't type in the word "tab"
@@ -667,7 +667,7 @@ numberlist.copy
 numberlist.count
 ```
 
-If we want more information about a method, we can type `object.method?` in the IPython console or `object.method` in the object inspector.  For the method `numberlist.append`, we get the description
+If we want more information about a method, we can type `object.method?` in a code cell.  For the method `numberlist.append`, we get the description
 
 ```python
 Definition:  append(object)
@@ -688,7 +688,7 @@ That's another way to get information about a method: try it and see what happen
 **Digression.**  We're trying to keep this simple, but we also want it to be accurate, so let us be more careful with the term **method**.  Needless to say, this is **mtwn**.  Tab completion gives us a list of two things:  *attributes* (properties of the object) and *methods* (essentially functions with different syntax).  The distinction isn't important to us, although we can tell a method because it comes with parentheses `()` (just like functions).
 
 
-**Example.** Set `firstname = 'Chase'`.  The method `lower` converts it to lower case.  If we type `firstname.lower` into the object inspector, we see that it comes with parentheses for additional inputs.  So we type `firstname.lower()` into the IPython console.  The response is `'chase'`.  The parentheses are there to provide additional inputs -- arguments, we call them.  Without the parentheses, it doesn't work.
+**Example.** Set `firstname = 'Chase'`.  The method `lower` converts it to lower case.  If we type `firstname.lower` into the object inspector, we see that it comes with parentheses for additional inputs.  So we type `firstname.lower()` into a code cell.  The response is `'chase'`.  The parentheses are there to provide additional inputs -- arguments, we call them.  Without the parentheses, it doesn't work.
 
 
 **Exercise.** Find a method to convert `firstname` to all upper case letters.
