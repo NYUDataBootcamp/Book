@@ -30,9 +30,9 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 
 **Step 1. Download the Anaconda installer.**
 
-* Click **[HERE](http://continuum.io/downloads)** or Google "Anaconda downloads."
+* Click **[HERE](https://www.anaconda.com/download/)** or Google "Anaconda downloads."
 * Scroll to find "Anaconda for Windows" or further down for "Anaconda for OS X."
-* Find the option for **Python 3.6.** **NOT** Python 2.7!  If you get 2.7, you'll have to start over.
+* Find the option for **Python 3.7.** **NOT** Python 2.7!  If you get 2.7, you'll have to start over.
 * Click the **64-bit Graphical Installer** to start the download.
 
 **Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says...
